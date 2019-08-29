@@ -12,7 +12,7 @@ const   express     = require('express'),
 
 mongoose.connect(process.env.MONGO_URI||"mongodb://localhost:27017/apiOMS", { useNewUrlParser: true, useCreateIndex: true },(err, res) => {
     if(err) throw err;
-    console.log('Base de datos en linea')
+    console.log('Base de datos en  \x1b[43m%s\x1b[40m', 'linea')
 });
 
 app.use(cors({origin: true, credentials: true}));
