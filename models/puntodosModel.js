@@ -11,7 +11,7 @@ const puntodosSchema =new mongoose.Schema({
         required: true,
         default:false
     },
-    PlantaEmergencia :{
+    plantaEmergencia :{
         type: Boolean,
         required: true,
         default: false
@@ -36,7 +36,7 @@ const puntodosSchema =new mongoose.Schema({
         required: true,
         default: false
     },
-    BodegaLubricantes: {
+    bodegaLubricantes: {
         type: Boolean,
         required: true,
         default: false
