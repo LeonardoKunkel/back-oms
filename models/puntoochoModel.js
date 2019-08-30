@@ -549,3 +549,5 @@ const puntoochoSchema = new mongoose.Schema({
         require:true
     }
 })
+
+module.exports = mongoose.model("Puntoocho",puntoochoSchema);
