@@ -30,7 +30,7 @@ const puntoseisSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    funcionesEsprcificas: {
+    funcionesEspecificas: {
         type: String,
         required: true
     },
