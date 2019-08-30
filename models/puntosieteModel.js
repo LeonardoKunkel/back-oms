@@ -13,12 +13,7 @@ const puntosieteSchema = new mongoose.Schema({
         require:true,
         default:false
     },
-    interno:{
-        type:Boolean,
-        require:true,
-        default:false
-
-    },
+    
     interno:{
         type:Boolean,
         require:true,
