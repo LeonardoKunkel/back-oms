@@ -51,4 +51,6 @@ router.get('/:id', [verificarToken], (req, res) => {
             })
 })
 
+
+module.exports =  router;
  
