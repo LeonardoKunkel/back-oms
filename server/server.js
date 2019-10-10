@@ -9,11 +9,14 @@ const   express     = require('express'),
         LoginRoutes = require('../routes/login'),
         AuthRoutes  = require('../routes/auth'),
         Puntodos = require('../routes/puntodos'),
+        EventoRoutes = require('../routes/evento'),
+        grafica = require('../models/grafica'),
         cors        = require('cors');
 
-mongoose.connect(process.env.MONGO_URI||"mongodb://localhost:27017/apOMS", { useNewUrlParser: true, useCreateIndex: true },(err, res) => {
-    if(err) throw err;
-    console.log('Base de datos en  \x1b[43m%s\x1b[40m', 'linea')
+mongoose.connect("mongodb://localhost:27017/apiOMS", { useNewUrlParser: true, useCreateIndex: true }).then(() =>{
+    console.log('Base de datos en  \x1b[43m%s\x1b[40m', 'linea');
+}).catch((err) => {
+    console.log('no se pudo conectar',err);
 });
 
 app.use(cors({origin: true, credentials: true}));
@@ -25,6 +28,9 @@ app.use('/user', UsuarioRoutes);
 app.use('/user/login', LoginRoutes);
 app.use('/user/auth', AuthRoutes);
 app.use('/puntodos',Puntodos);
+app.use('/evento',EventoRoutes);
+
+//app.use('/grafica',grafica);
 
 app.get('/', function (req, res){
     res.json({message: 'Bienvenido a la API de OMS'})

@@ -28,7 +28,13 @@ const usuarioModelSchema = new mongoose.Schema({
     creado: {
         type: Date,
         default: Date.now()
-    }
+    },
+    eventos: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Evento'
+        }
+    ]
 });
 
 usuarioModelSchema.methods.toJSON = function (){
