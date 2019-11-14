@@ -7,7 +7,7 @@ const eventoModelSchema = new mongose.Schema({
         required: true
     },
     start: {
-        type: Date,
+        type: String,
         required: true
     },
 })
