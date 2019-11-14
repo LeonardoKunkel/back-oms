@@ -11,6 +11,7 @@ const   express     = require('express'),
         Puntodos = require('../routes/puntodos'),
         EventoRoutes = require('../routes/evento'),
         grafica = require('../models/grafica'),
+        Mapa = require('../routes/mapa'),
         cors        = require('cors');
 
 mongoose.connect("mongodb://localhost:27017/apiOMS", { useNewUrlParser: true, useCreateIndex: true }).then(() =>{
@@ -29,6 +30,7 @@ app.use('/user/login', LoginRoutes);
 app.use('/user/auth', AuthRoutes);
 app.use('/puntodos',Puntodos);
 app.use('/evento',EventoRoutes);
+app.use('/location', Mapa);
 
 //app.use('/grafica',grafica);
 
