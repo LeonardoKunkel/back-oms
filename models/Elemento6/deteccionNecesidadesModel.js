@@ -1,0 +1,60 @@
+const mongoose = require('mongoose'),
+      moment = require('moment');
+const punto6DeteccionNecesidades = new mongoose.Schema({
+    R1:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    R2:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    R3:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    R4:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    R5:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    R6:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    R7:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    R8:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    R9:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    R10:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    R11:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+});
+module.exports = mongoose.model("Punto 6 Deteccion Necesidades",punto6DeteccionNecesidades);
