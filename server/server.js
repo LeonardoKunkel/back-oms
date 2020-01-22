@@ -8,10 +8,11 @@ const   express     = require('express'),
         UsuarioRoutes = require('../routes/usuario'),
         LoginRoutes = require('../routes/login'),
         AuthRoutes  = require('../routes/auth'),
-        Puntodos = require('../routes/puntodos'),
-        EventoRoutes = require('../routes/evento'),
-        grafica = require('../models/grafica'),
-        Mapa = require('../routes/mapa'),
+        ListadoPeligros = require('../routes/listadoPeligros'),
+        ResultadosRiesgos = require('../routes/resultadosRiesgos'),
+        EvidenciaDos = require('../routes/evidenciaDos'),
+        EvaluacionRiesgos = require('../routes/evaluacionRiesgos'),
+        EvaluacioAspectosAmbientales = require('../routes/evaluacionAspectosAmbientales'),
         cors        = require('cors');
 
 mongoose.connect("mongodb://localhost:27017/apiOMS", { useNewUrlParser: true, useCreateIndex: true }).then(() =>{
@@ -28,11 +29,12 @@ app.use(upload({ useTempFiles: true }));
 app.use('/user', UsuarioRoutes);
 app.use('/user/login', LoginRoutes);
 app.use('/user/auth', AuthRoutes);
-app.use('/puntodos',Puntodos);
-app.use('/evento',EventoRoutes);
-app.use('/location', Mapa);
+app.use('/aspectosAbientales', EvaluacioAspectosAmbientales);
+app.use('/evaluacionRiesgos',EvaluacionRiesgos);
+app.use('/evidenciaDos',EvidenciaDos);
+app.use('/listadoPeligros',ListadoPeligros);
+app.use('/resultadosRiesgos',ResultadosRiesgos);
 
-//app.use('/grafica',grafica);
 
 app.get('/', function (req, res){
     res.json({message: 'Bienvenido a la API de OMS'})
