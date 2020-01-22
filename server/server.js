@@ -10,6 +10,7 @@ const   express     = require('express'),
         AuthRoutes  = require('../routes/auth'),
         ListadoPeligros = require('../routes/listadoPeligros'),
         ResultadosRiesgos = require('../routes/resultadosRiesgos'),
+        ObjetivosMetasIndicadotes = require('../routes/objetivosMetasIndicadores'),
         EvidenciaDos = require('../routes/evidenciaDos'),
         EvaluacionRiesgos = require('../routes/evaluacionRiesgos'),
         EvaluacioAspectosAmbientales = require('../routes/evaluacionAspectosAmbientales'),
@@ -34,6 +35,7 @@ app.use('/evaluacionRiesgos',EvaluacionRiesgos);
 app.use('/evidenciaDos',EvidenciaDos);
 app.use('/listadoPeligros',ListadoPeligros);
 app.use('/resultadosRiesgos',ResultadosRiesgos);
+app.use('/objetivosMetasIndicadores', ObjetivosMetasIndicadotes);
 
 
 app.get('/', function (req, res){
