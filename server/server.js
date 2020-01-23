@@ -12,7 +12,11 @@ const   express     = require('express'),
         ResultadosRiesgos = require('../routes/resultadosRiesgos'),
         ObjetivosMetasIndicadotes = require('../routes/objetivosMetasIndicadores'),
         EvidenciaDos = require('../routes/evidenciaDos'),
+        DeteccionNecesidades = require('../routes/deteccionNecesidades'),
+        MatrizResponsabilidades = require('../routes/matrizResponsabilidades'),
         EvaluacionRiesgos = require('../routes/evaluacionRiesgos'),
+        ComunicacionParticipacionConsulta = require('../routes/comunicacionParticipacionConsulta'),
+        CopetenciasPersonales = require('../models/Elemento6/copetenciaPersonalModel'),
         EvaluacioAspectosAmbientales = require('../routes/evaluacionAspectosAmbientales'),
         cors        = require('cors');
 
@@ -36,6 +40,12 @@ app.use('/evidenciaDos',EvidenciaDos);
 app.use('/listadoPeligros',ListadoPeligros);
 app.use('/resultadosRiesgos',ResultadosRiesgos);
 app.use('/objetivosMetasIndicadores', ObjetivosMetasIndicadotes);
+app.use('/matrizResponsabilidades',MatrizResponsabilidades);
+app.use('/copetencias', CopetenciasPersonales);
+app.use('/deteccionNecesidades', DeteccionNecesidades);
+app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
+//app.use('')
+
 
 
 app.get('/', function (req, res){
