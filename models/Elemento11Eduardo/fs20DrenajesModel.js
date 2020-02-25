@@ -1,277 +1,367 @@
 const mongoose = require('mongoose'),
-        moment = require('moment');
+      moment = require('moment');
 
-const evaluacionRiesgosSchema = new mongoose.Schema({
-    F1: {
+const punto11DrenajesSchema = new mongoose.Schema({
+    c1C1:{
         type:Boolean,
         required:true,
         default:false
     },
-    C1: {
+    c2C1:{
         type:Boolean,
         required:true,
         default:false
     },
-    R1: {
+    c3C1:{
         type:Boolean,
         required:true,
         default:false
     },
-    F2: {
+    c4C1:{
         type:Boolean,
         required:true,
         default:false
     },
-    C2: {
+    c5C1:{
         type:Boolean,
         required:true,
         default:false
     },
-    R2: {
+    c6C1:{
         type:Boolean,
         required:true,
         default:false
     },
-    F3: {
+    c7C1:{
         type:Boolean,
         required:true,
         default:false
     },
-    C3: {
+    c8C1:{
         type:Boolean,
         required:true,
         default:false
     },
-    R3: {
+    c9C1:{
         type:Boolean,
         required:true,
         default:false
     },
-    F4: {
+    c10C1:{
         type:Boolean,
         required:true,
         default:false
     },
-    C4: {
+    c11C1:{
         type:Boolean,
         required:true,
         default:false
     },
-    R4: {
+    c12C1:{
         type:Boolean,
         required:true,
         default:false
     },
-    F5: {
+    c1C2:{
         type:Boolean,
         required:true,
         default:false
     },
-    C5: {
+    c2C2:{
         type:Boolean,
         required:true,
         default:false
     },
-    R5: {
+    c3C2:{
         type:Boolean,
         required:true,
         default:false
     },
-    F6: {
+    c4C2:{
         type:Boolean,
         required:true,
         default:false
     },
-    C6: {
+    c5C2:{
         type:Boolean,
         required:true,
         default:false
     },
-    R6: {
+    c6C2:{
         type:Boolean,
         required:true,
         default:false
     },
-    F7: {
+    c7C2:{
         type:Boolean,
         required:true,
         default:false
     },
-    C7: {
+    c8C2:{
         type:Boolean,
         required:true,
         default:false
     },
-    R7: {
+    c9C2:{
         type:Boolean,
         required:true,
         default:false
     },
-    F8: {
+    c10C2:{
         type:Boolean,
         required:true,
         default:false
     },
-    C8: {
+    c11C2:{
         type:Boolean,
         required:true,
         default:false
     },
-    R8: {
+    c12C2:{
         type:Boolean,
         required:true,
         default:false
     },
-    F9: {
+    c1C3:{
         type:Boolean,
         required:true,
         default:false
     },
-    C9: {
+    c2C3:{
         type:Boolean,
         required:true,
         default:false
     },
-    R9: {
+    c3C3:{
         type:Boolean,
         required:true,
         default:false
     },
-    F10:{
+    c4C3:{
         type:Boolean,
         required:true,
         default:false
     },
-    C10:{
+    c5C3:{
         type:Boolean,
         required:true,
         default:false
     },
-    R10:{
+    c6C3:{
         type:Boolean,
         required:true,
         default:false
     },
-    F11:{
+    c7C3:{
         type:Boolean,
         required:true,
         default:false
     },
-    C11:{
+    c8C3:{
         type:Boolean,
         required:true,
         default:false
     },
-    R11:{
+    c9C3:{
         type:Boolean,
         required:true,
         default:false
     },
-    F12:{
+    c10C3:{
         type:Boolean,
         required:true,
         default:false
     },
-    C12:{
+    c11C3:{
         type:Boolean,
         required:true,
         default:false
     },
-    R12:{
+    c12C3:{
         type:Boolean,
         required:true,
         default:false
     },
-    F13:{
+    c1C4:{
         type:Boolean,
         required:true,
         default:false
     },
-    C13:{
+    c2C4:{
         type:Boolean,
         required:true,
         default:false
     },
-    R13:{
+    c3C4:{
         type:Boolean,
         required:true,
         default:false
     },
-    F14:{
+    c4C4:{
         type:Boolean,
         required:true,
         default:false
     },
-    C14:{
+    c5C4:{
         type:Boolean,
         required:true,
         default:false
     },
-    R14:{
+    c6C4:{
         type:Boolean,
         required:true,
         default:false
     },
-    F15:{
+    c7C4:{
         type:Boolean,
         required:true,
         default:false
     },
-    C15:{
+    c8C4:{
         type:Boolean,
         required:true,
         default:false
     },
-    R15:{
+    c9C4:{
         type:Boolean,
         required:true,
         default:false
     },
-    F16:{
+    c10C4:{
         type:Boolean,
         required:true,
         default:false
     },
-    C16:{
+    c11C4:{
         type:Boolean,
         required:true,
         default:false
     },
-    R16:{
+    c12C4:{
         type:Boolean,
         required:true,
         default:false
     },
-    F17:{
+    c1C5:{
         type:Boolean,
         required:true,
         default:false
     },
-    C17:{
+    c2C5:{
         type:Boolean,
         required:true,
         default:false
     },
-    R17:{
+    c3C5:{
         type:Boolean,
         required:true,
         default:false
     },
-    F18:{
+    c4C5:{
         type:Boolean,
         required:true,
         default:false
     },
-    C18:{
+    c5C5:{
         type:Boolean,
         required:true,
         default:false
     },
-    R18:{
+    c6C5:{
         type:Boolean,
         required:true,
         default:false
-    }
-
+    },
+    c7C5:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c8C5:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c9C5:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c10C5:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c11C5:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c12C5:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c1C6:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c2C6:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c3C6:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c4C6:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c5C6:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c6C6:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c7C6:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c8C6:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c9C6:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c10C6:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c11C6:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+    c12C6:{
+        type:Boolean,
+        required:true,
+        default:false
+    },
+  
 })
-module.exports = mongoose.model('Evaluacion Riesgos',evaluacionRiesgosSchema);
+module.exports = mongoose.model("Punto 11 mantenimiento de drenajes",punto11DrenajesSchema)

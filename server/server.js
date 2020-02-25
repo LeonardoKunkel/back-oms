@@ -8,11 +8,21 @@ const   express     = require('express'),
         UsuarioRoutes = require('../routes/usuario'),
         LoginRoutes = require('../routes/login'),
         AuthRoutes  = require('../routes/auth'),
-        Puntodos = require('../routes/puntodos'),
         EventoRoutes = require('../routes/evento'),
         grafica = require('../models/grafica'),
         Mapa = require('../routes/mapa'),
-        Politica = require('../routes/Elemento1/politica');
+        Politica = require('../routes/Elemento1/politica'),
+        ListadoPeligros = require('../routes/listadoPeligros'),
+        ResultadosRiesgos = require('../routes/resultadosRiesgos'),
+        ObjetivosMetasIndicadotes = require('../routes/objetivosMetasIndicadores'),
+        EvidenciaDos = require('../routes/evidenciaDos'),
+        DeteccionNecesidades = require('../routes/deteccionNecesidades'),
+        MatrizResponsabilidades = require('../routes/matrizResponsabilidades'),
+        EvaluacionRiesgos = require('../routes/evaluacionRiesgos'),
+        ComunicacionParticipacionConsulta = require('../routes/comunicacionParticipacionConsulta'),
+        CopetenciasPersonales = require('../models/Elemento6/copetenciaPersonalModel'),
+        EvaluacioAspectosAmbientales = require('../routes/evaluacionAspectosAmbientales'),
+
         cors        = require('cors');
 
 mongoose.connect("mongodb://localhost:27017/apiOMS", { useNewUrlParser: true, useCreateIndex: true }).then(() =>{
@@ -29,12 +39,22 @@ app.use(upload({ useTempFiles: true }));
 app.use('/user', UsuarioRoutes);
 app.use('/user/login', LoginRoutes);
 app.use('/user/auth', AuthRoutes);
-app.use('/puntodos',Puntodos);
 app.use('/evento',EventoRoutes);
 app.use('/location', Mapa);
 app.use('/politica', Politica);
+app.use('/aspectosAbientales', EvaluacioAspectosAmbientales);
+app.use('/evaluacionRiesgos',EvaluacionRiesgos);
+app.use('/evidenciaDos',EvidenciaDos);
+app.use('/listadoPeligros',ListadoPeligros);
+app.use('/resultadosRiesgos',ResultadosRiesgos);
+app.use('/objetivosMetasIndicadores', ObjetivosMetasIndicadotes);
+app.use('/matrizResponsabilidades',MatrizResponsabilidades);
+app.use('/copetencias', CopetenciasPersonales);
+app.use('/deteccionNecesidades', DeteccionNecesidades);
+app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
+//app.use('')
 
-//app.use('/grafica',grafica);
+
 
 app.get('/', function (req, res){
     res.json({message: 'Bienvenido a la API de OMS'})

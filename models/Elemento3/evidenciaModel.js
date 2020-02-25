@@ -1,7 +1,7 @@
 const mongoose = require('mongoose'),
       moment = require('moment');
 
-const evidenciaSchema = new mongoose.Schema({
+const evidenciaTresSchema = new mongoose.Schema({
     archivo:{
         type : String,
         required : true,
