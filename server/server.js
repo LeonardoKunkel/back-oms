@@ -14,6 +14,7 @@ const   express     = require('express'),
         Politica = require('../routes/Elemento 1/politica'),
         ObjetivosMetas = require('../routes/Elemento 4/objetivosMetasIndicadores'),
         cartaDesignacion = require('../routes/Elemento 5/cartaDesignacion'),
+        Riesgos = require('../routes/Elemento2/riesgosRuta'),
         cors = require('cors');
 
     mongoose.connect("mongodb://localhost:27017/apiOMS", { useNewUrlParser: true, useCreateIndex: true }).then(() =>{
@@ -33,6 +34,7 @@ const   express     = require('express'),
     app.use('/politica',Politica),
     app.use('/objetivosMetas',ObjetivosMetas);
     app.use('/cartaDesignacion',cartaDesignacion);
+    app.use('/riesgos',Riesgos);
     //app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
     //app.use('')
 
