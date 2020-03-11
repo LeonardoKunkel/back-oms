@@ -1,117 +1,32 @@
-const mongoose = require('mongoose'),
-      moment = require('moment');
+const mongoose = require('mongoose')
 
 const ObjetivosMetasIndicadoresSchema = new mongoose.Schema({
-    objetivo:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    proceso:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    nombre:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    periodo:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    meta1:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    actividad1:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    indicador1:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    soporte1:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    frecuencia1:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    criterio1:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    meta2:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    actividad2:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    indicador2:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    soporte2:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    frecuencia2:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    criterio2:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    meta3:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    actividad3:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    indicador3:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    soporte3:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    frecuencia3:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
-    criterio3:{
-      type : String,
-      required : true,
-      default : "falta Campo"
-    },
+
+  reduccionGeneracionResiduos:{
+    type : String
+  },
+  reduccionConsumoAgua:{ 
+    type:String,
+  },
+  reduccionConsumoEnergia : { 
+    type:String,
+  },
+  cumplimientoProgramaMantenimiento : { 
+    type:String,
+  },
+  mejorarActividadesSimulacros:{ 
+    type:String,
+  },
+  incrementarCapacitaciones:{
+    type:String,
+  },
+  mejorarServicioAtencionCliente:{ 
+    type:String,
+  },
+  incrementarVentaAnualmente:{ 
+    type:String,
+  },
+ 
 });
 
-module.exports = mongoose.model("Punto 4 Objetivos Metas Indicadores",ObjetivosMetasIndicadoresSchema)
+module.exports = mongoose.model("ObjetivosMetasIndicadores",ObjetivosMetasIndicadoresSchema)
