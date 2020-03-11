@@ -10,14 +10,16 @@ const   express     = require('express'),
         AuthRoutes  = require('../routes/auth'),
         ListadoPeligros = require('../routes/listadoPeligros'),
         ResultadosRiesgos = require('../routes/resultadosRiesgos'),
-        ObjetivosMetasIndicadotes = require('../routes/objetivosMetasIndicadores'),
         EvidenciaDos = require('../routes/evidenciaDos'),
         DeteccionNecesidades = require('../routes/deteccionNecesidades'),
         MatrizResponsabilidades = require('../routes/matrizResponsabilidades'),
         EvaluacionRiesgos = require('../routes/evaluacionRiesgos'),
-        ComunicacionParticipacionConsulta = require('../routes/comunicacionParticipacionConsulta'),
+        //ComunicacionParticipacionConsulta = require('../routes/comunicacionParticipacionConsulta'),
         CopetenciasPersonales = require('../models/Elemento6/copetenciaPersonalModel'),
         EvaluacioAspectosAmbientales = require('../routes/evaluacionAspectosAmbientales'),
+        Politica = require('../routes/Elemento 1/politica'),
+        ObjetivosMetas = require('../routes/Elemento 4/objetivosMetasIndicadores'),
+        cartaDesignacion = require('../routes/Elemento 5/cartaDesignacion'),
         cors        = require('cors');
 
 mongoose.connect("mongodb://localhost:27017/apiOMS", { useNewUrlParser: true, useCreateIndex: true }).then(() =>{
@@ -39,11 +41,13 @@ app.use('/evaluacionRiesgos',EvaluacionRiesgos);
 app.use('/evidenciaDos',EvidenciaDos);
 app.use('/listadoPeligros',ListadoPeligros);
 app.use('/resultadosRiesgos',ResultadosRiesgos);
-app.use('/objetivosMetasIndicadores', ObjetivosMetasIndicadotes);
 app.use('/matrizResponsabilidades',MatrizResponsabilidades);
 app.use('/copetencias', CopetenciasPersonales);
 app.use('/deteccionNecesidades', DeteccionNecesidades);
-app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
+app.use('/politica',Politica),
+app.use('/objetivosMetas',ObjetivosMetas);
+app.use('/cartaDesignacion',cartaDesignacion);
+//app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
 //app.use('')
 
 

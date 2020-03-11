@@ -1,5 +1,5 @@
 const express = require('express'),
-      ComunicacionParticipacionConsulta = require('../models/Elemento7/comunicacionParticipacionConsultaModels'),
+      //ComunicacionParticipacionConsulta = require('../models/Elemento7/comunicacionParticipacionConsultaModels'),
       {verificarToken} = require('../server/middlewares/auth'),
       router = express.Router();
 
