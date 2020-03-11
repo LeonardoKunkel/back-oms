@@ -7,11 +7,11 @@ router.post('/create',[verificarToken],(req,res) => {
     const body = req.body;
     console.log(body);
     
-    politicaEscogida = {
+    newPolitica = {
         politica: body.politica
     }
 
-    politicas.create(politicaEscogida,(err,politicaEscogidaBD) => {
+    politicas.create(newPolitica,(err,crearPolitica) => {
         if(err) {
             res.status(400).json({
                 message: 'Error al crear la politica',
@@ -20,13 +20,12 @@ router.post('/create',[verificarToken],(req,res) => {
         }
         res.json({
             ok: true,
-            politicaEscogidaBD
+            crearPolitica
         })
     })
 
     router.get('/',[verificarToken],(req,res) => {
-        politicaEscogida.find().
-        exec((err,politicaEscogida) => {
+        politicas.find().exec((err,findPolitica) => {
             if(err) {
                 res.status(400).json({
                     message: 'Error al traer la politica',
@@ -35,7 +34,7 @@ router.post('/create',[verificarToken],(req,res) => {
             }
             res.json({
                 ok: true,
-                politicaEscogida
+                findPolitica
             })
         })
     })

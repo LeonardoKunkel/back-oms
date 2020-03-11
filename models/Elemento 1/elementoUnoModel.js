@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-
 const elementoUnoSchema = new mongoose.Schema({
     politica: {
         type: String,
@@ -8,4 +7,4 @@ const elementoUnoSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model("Elemneto uno", elementoUnoSchema);
+module.exports = mongoose.model("Elemento uno", elementoUnoSchema);
