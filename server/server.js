@@ -8,6 +8,10 @@ const   express     = require('express'),
         UsuarioRoutes = require('../routes/usuario'),
         LoginRoutes = require('../routes/login'),
         AuthRoutes  = require('../routes/auth'),
+        EventoRoutes = require('../routes/evento'),
+        grafica = require('../models/grafica'),
+        Mapa = require('../routes/mapa'),
+        Politica = require('../routes/Elemento1/politica'),
         ListadoPeligros = require('../routes/listadoPeligros'),
         ResultadosRiesgos = require('../routes/resultadosRiesgos'),
         EvidenciaDos = require('../routes/evidenciaDos'),
@@ -57,3 +61,4 @@ const   express     = require('express'),
     })
     
     app.listen(process.env.PORT,() => console.log('Esta vivo'));
+});
