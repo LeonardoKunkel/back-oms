@@ -14,6 +14,13 @@ const   express     = require('express'),
         Politica = require('../routes/Elemento 1/politica'),
         ObjetivosMetas = require('../routes/Elemento 4/objetivosMetasIndicadores'),
         cartaDesignacion = require('../routes/Elemento 5/cartaDesignacion'),
+        copetenciaPersonalDirector = require('../routes/Elemento 6/copetenciaPersonalDirector'),
+        copetenciaPersonalRepresentante = require('../routes/Elemento 6/copetenciaPersonalRepresentante'),
+        copetenciaPersonalEncargado = require('../routes/Elemento 6/copetenciaPersonalEncargado'),
+        copetenciaPersonalJEfe =  require('../routes/Elemento 6/copetenciaPersonalJefe'),
+        coptetenciaPersonalDespachadores = require('../routes/Elemento 6/copetenciaPersonalDespachadores'),
+        copetenciaPersonalMantenimiento = require('../routes/Elemento 6/copetenciaPersonalMantenimiento'),
+        copetenciaPersonalContratista = require('../routes/Elemento 6/copetenciaPersonalContratista'),
         cors = require('cors');
 
     mongoose.connect("mongodb://localhost:27017/apiOMS", { useNewUrlParser: true, useCreateIndex: true }).then(() =>{
@@ -33,6 +40,13 @@ const   express     = require('express'),
     app.use('/politica',Politica),
     app.use('/objetivosMetas',ObjetivosMetas);
     app.use('/cartaDesignacion',cartaDesignacion);
+    app.use('/copetenciaPersonalDirector',copetenciaPersonalDirector);
+    app.use('/copetenciaPersonalRepresentante',copetenciaPersonalRepresentante);
+    app.use('/copetenciaPersonalEncargado',copetenciaPersonalEncargado);
+    app.use('/copetenciaPersonalJefe',copetenciaPersonalJEfe);
+    app.use('/coptenciaPersonalDespachadores',coptetenciaPersonalDespachadores);
+    app.use('/copetenciaPersonalMantenimiento',copetenciaPersonalMantenimiento);
+    app.use('/copetenciaPersonalContratista',copetenciaPersonalContratista);
     //app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
     //app.use('')
 

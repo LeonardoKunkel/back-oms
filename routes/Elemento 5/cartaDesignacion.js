@@ -26,11 +26,11 @@ const express = require('express'),
                       message:'Error al crear la carta designacion',
                       err
                   })
-                  res.json({
-                      ok:true,
-                      crearCartaDesignacion
-                  })
               }
+              res.json({
+                  ok:true,
+                  crearCartaDesignacion
+              })
           })
           
       })
