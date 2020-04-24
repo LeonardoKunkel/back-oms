@@ -21,6 +21,8 @@ const   express     = require('express'),
         coptetenciaPersonalDespachadores = require('../routes/Elemento 6/copetenciaPersonalDespachadores'),
         copetenciaPersonalMantenimiento = require('../routes/Elemento 6/copetenciaPersonalMantenimiento'),
         copetenciaPersonalContratista = require('../routes/Elemento 6/copetenciaPersonalContratista'),
+        anexoSeguridadElemento12 = require('../routes/Elemento 12/anexoSeguridad'),
+        acordeon = require('../routes/Elemento 13/acordeon'),
         cors = require('cors');
 
     mongoose.connect("mongodb://localhost:27017/apiOMS", { useNewUrlParser: true, useCreateIndex: true }).then(() =>{
@@ -47,6 +49,8 @@ const   express     = require('express'),
     app.use('/coptenciaPersonalDespachadores',coptetenciaPersonalDespachadores);
     app.use('/copetenciaPersonalMantenimiento',copetenciaPersonalMantenimiento);
     app.use('/copetenciaPersonalContratista',copetenciaPersonalContratista);
+    app.use('/anexoSeguridadElemento12',anexoSeguridadElemento12);
+    app.use('/acordeon',acordeon);
     //app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
     //app.use('')
 

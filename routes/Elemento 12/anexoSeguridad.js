@@ -1,5 +1,5 @@
 const express = require('express'),
-        copetenciaPersonalDespachadores = require('../../models/Elemento6/copetenciaPersonalDespachadoresModel'),
+        anexoSeguridadElemento12 = require('../../models/Elemento12/anexoSeguridadModel'),
         {verificarToken} = require('../../server/middlewares/auth'),
         router = express.Router();
 
@@ -10,14 +10,19 @@ router.post('/create',[verificarToken],(req,res)=>{
     console.log(body);
     let newDatos = {
 
-        caracteristicasPersonales: body.caracteristicasPersonales,
-        requerimientosFisicos: body.requerimientosFisicos,
-        herramientasEquipos: body.herramientasEquipos,
-        equipoProteccion: body.equipoProteccion,
+        regla1: body.regla1,
+        regla2: body.regla2,
+        regla3: body.regla3,
+        regla4: body.regla4,
+        regla5: body.regla5,
+        regla6: body.regla6,
+        regla7: body.regla7,
+        regla8: body.regla8,
+        regla9: body.regla9,
 
     }
 
-    copetenciaPersonalDespachadores.create(newDatos,(err,crearCopetenciaPersonalDespachadores)=>{
+    anexoSeguridadElemento12.create(newDatos,(err,crearAnexoSeguridad)=>{
         if(err){
             res.status(400).json({
                 message:'Error al crear la copetencian den los despachadores',
@@ -26,7 +31,7 @@ router.post('/create',[verificarToken],(req,res)=>{
         }
         res.json({
             ok:true,
-            crearCopetenciaPersonalDespachadores
+            crearAnexoSeguridad
         })
     })
     
