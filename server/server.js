@@ -4,6 +4,7 @@ const   express     = require('express'),
         app         = express(),
         mongoose    = require('mongoose'),
         bodyParser  = require('body-parser'),
+        multipart   = require('connect-multiparty'),
         upload      = require('express-fileupload'),
         UsuarioRoutes = require('../routes/usuario'),
         LoginRoutes = require('../routes/login'),
@@ -21,6 +22,8 @@ const   express     = require('express'),
         coptetenciaPersonalDespachadores = require('../routes/Elemento 6/copetenciaPersonalDespachadores'),
         copetenciaPersonalMantenimiento = require('../routes/Elemento 6/copetenciaPersonalMantenimiento'),
         copetenciaPersonalContratista = require('../routes/Elemento 6/copetenciaPersonalContratista'),
+        estacionServicio = require('../routes/estacionServicio'),
+        evidenciaUno = require('../routes/Elemento 1/evidencia1'),
         cors = require('cors');
 
     mongoose.connect("mongodb://localhost:27017/apiOMS", { useNewUrlParser: true, useCreateIndex: true }).then(() =>{
@@ -28,6 +31,16 @@ const   express     = require('express'),
     }).catch((err) => {
     console.log('no se pudo conectar',err);
     });
+
+    const multipartMiddleware = multipart({
+        uploadDir: '/subidas'
+    });
+
+    app.post('/api/subir', multipartMiddleware,(req,res)=>{
+        res.json({
+            'message':'Se subio con exito'
+        });
+    })
 
     app.use(cors({origin: true, credentials: true}));
     app.use(bodyParser.urlencoded({extended: false}));
@@ -47,6 +60,8 @@ const   express     = require('express'),
     app.use('/coptenciaPersonalDespachadores',coptetenciaPersonalDespachadores);
     app.use('/copetenciaPersonalMantenimiento',copetenciaPersonalMantenimiento);
     app.use('/copetenciaPersonalContratista',copetenciaPersonalContratista);
+    app.use('/estacionServicio',estacionServicio);
+    app.use('/evidenciaUno',evidenciaUno);
     //app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
     //app.use('')
 

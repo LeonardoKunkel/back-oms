@@ -1,26 +1,9 @@
-const mongoose = require('mongoose'),
-        moment = require('moment');
+const mongoose = require('mongoose');
 
-const evidenciaSchema = new mongoose.Schema({
-    archivo:{
-        type : String,
-        required : true,
-        default : false
-    },
-    foto:{
-        type : String ,
-        required : true,
-        default : false
-    },
-    imagen:{
-        type : String,
-        required : true,
-        default : false
-    },
-    descripcion:{
-        type:String,
-        required:true,
-        default:false
-    }
-});
-module.exports = mongoose.model("Punto Uno Evidencia",evidenciaSchema);
+    const evidenciaElemento1Schema = new mongoose.Schema({
+        evidencia: {
+            type: String
+        }
+    })
+
+    module.exports = mongoose.model("Evidencia elemento uno", evidenciaElemento1Schema);
