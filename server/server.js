@@ -1,10 +1,10 @@
 require('./config/config');
 
 const   express     = require('express'),
-        app         = express(),
         mongoose    = require('mongoose'),
         bodyParser  = require('body-parser'),
-        multipart   = require('connect-multiparty'),
+        multer      = require('multer'),
+        morgan      = require('morgan'),
         upload      = require('express-fileupload'),
         UsuarioRoutes = require('../routes/usuario'),
         LoginRoutes = require('../routes/login'),
@@ -24,28 +24,38 @@ const   express     = require('express'),
         copetenciaPersonalContratista = require('../routes/Elemento 6/copetenciaPersonalContratista'),
         estacionServicio = require('../routes/estacionServicio'),
         evidenciaUno = require('../routes/Elemento 1/evidencia1'),
+        evidenciaUnoRuta =require('../routes/Elemento 1/evidenciaUno'),
+        app = express(),
         cors = require('cors');
+
+        const uuid = require('uuid/v4');
+        const path = require('path');
 
     mongoose.connect("mongodb://localhost:27017/apiOMS", { useNewUrlParser: true, useCreateIndex: true }).then(() =>{
     console.log('Base de datos en  \x1b[43m%s\x1b[40m', 'linea');
     }).catch((err) => {
     console.log('no se pudo conectar',err);
     });
-
-    const multipartMiddleware = multipart({
-        uploadDir: '/subidas'
-    });
-
-    app.post('/api/subir', multipartMiddleware,(req,res)=>{
-        res.json({
-            'message':'Se subio con exito'
-        });
-    })
-
+    
     app.use(cors({origin: true, credentials: true}));
     app.use(bodyParser.urlencoded({extended: false}));
     app.use(bodyParser.json()); 
-    app.use(upload({ useTempFiles: true }));
+
+
+    
+    //Morga y multer para subie imagenes o documentos.
+    app.use(morgan('dev'));
+    const storage = multer.diskStorage({
+        destination: path.join(__dirname, '../subidas'),
+        filename: (req, file, cb, filename)=>{
+            console.log(file);
+            cb(null, uuid() +path.extname(file.originalname));
+        }
+    })
+    //Se realiza el middleware para subir evidencia
+    app.use(multer({storage}).single('image'));
+
+    app.use('/img',evidenciaUnoRuta);
 
     app.use('/user', UsuarioRoutes);
     app.use('/user/login', LoginRoutes);
@@ -62,9 +72,10 @@ const   express     = require('express'),
     app.use('/copetenciaPersonalContratista',copetenciaPersonalContratista);
     app.use('/estacionServicio',estacionServicio);
     app.use('/evidenciaUno',evidenciaUno);
-    //app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
-    //app.use('')
 
+
+    // app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
+    // app.use('')
 
 
     app.get('/', function (req, res){
