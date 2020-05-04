@@ -1,5 +1,5 @@
 const express = require('express'),
-      riesgo = require('../../models/Elemento 2/riesgosModel'),
+      riesgo = require('../../models/Elemento2/riesgosModel'),
       {verificarToken} = require('../../server/middlewares/auth'),
       router = express.Router();
       

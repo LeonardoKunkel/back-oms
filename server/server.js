@@ -14,7 +14,15 @@ const   express     = require('express'),
         Politica = require('../routes/Elemento 1/politica'),
         ObjetivosMetas = require('../routes/Elemento 4/objetivosMetasIndicadores'),
         cartaDesignacion = require('../routes/Elemento 5/cartaDesignacion'),
-        Riesgos = require('../routes/Elemento2/riesgosRuta'),
+        Riesgos = require('../routes/Elemento 2/riesgosRuta'),
+        Aspectos = require('../routes/Elemento 2/aspectosRuta'),
+        Asamuno = require('../routes/Elemento 2/aspectosAmbientales/asamUnoRuta'),
+        Asamdos = require('../routes/Elemento 2/aspectosAmbientales/asamDosRuta'),
+        Asamtres = require('../routes/Elemento 2/aspectosAmbientales/asamTresRuta'),
+        Asamcuatro = require('../routes/Elemento 2/aspectosAmbientales/asamCuatroRuta'),
+        Asamcinco = require('../routes/Elemento 2/aspectosAmbientales/asamCincoRuta'),
+        Asamseis = require('../routes/Elemento 2/aspectosAmbientales/asamSeisRuta'),
+        ListaComunicacion = require('../routes/Elemento 7/listaRuta'),
         cors = require('cors');
 
     mongoose.connect("mongodb://localhost:27017/apiOMS", { useNewUrlParser: true, useCreateIndex: true }).then(() =>{
@@ -35,7 +43,11 @@ const   express     = require('express'),
     app.use('/objetivosMetas',ObjetivosMetas);
     app.use('/cartaDesignacion',cartaDesignacion);
     app.use('/riesgos',Riesgos);
-    //app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
+    app.use('/aspectosAmbientales', Aspectos);
+    app.use('/Almacenamiento', Asamuno);
+    app.use('/Modulo',Asamdos);
+    
+    app.use('/Lista_de_Comunicacion',ListaComunicacion);
     //app.use('')
 
 

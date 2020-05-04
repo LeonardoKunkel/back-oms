@@ -153,6 +153,10 @@ const aspectosModelSchema = new mongoose.Schema ({
         type: String,
         required: true
     },
+    F39: {
+        type: String,
+        required: true
+    },
     N1: {
         type: String,
         required: true
@@ -305,6 +309,10 @@ const aspectosModelSchema = new mongoose.Schema ({
         type: String,
         required: true
     },
+    N39: {
+        type: String,
+        required: true
+    },
     M1: {
         type: String,
         required: true
@@ -454,6 +462,166 @@ const aspectosModelSchema = new mongoose.Schema ({
         required: true
     },
     M38: {
+        type: String,
+        required: true
+    },
+    M39: {
+        type: String,
+        required: true
+    },
+    VT1: {
+        type: String,
+        required: true
+    },
+    VT2: {
+        type: String,
+        required: true
+    },
+    VT3: {
+        type: String,
+        required: true
+    },
+    VT4: {
+        type: String,
+        required: true
+    },
+    VT5: {
+        type: String,
+        required: true
+    },
+    VT6: {
+        type: String,
+        required: true
+    },
+    VT7: {
+        type: String,
+        required: true
+    },
+    VT8: {
+        type: String,
+        required: true
+    },
+    VT9: {
+        type: String,
+        required: true
+    },
+    VT10: {
+        type: String,
+        required: true
+    },
+    VT11: {
+        type: String,
+        required: true
+    },
+    VT12: {
+        type: String,
+        required: true
+    },
+    VT13: {
+        type: String,
+        required: true
+    },
+    VT14: {
+        type: String,
+        required: true
+    },
+    VT15: {
+        type: String,
+        required: true
+    },
+    VT16: {
+        type: String,
+        required: true
+    },
+    VT17: {
+        type: String,
+        required: true
+    },
+    VT18: {
+        type: String,
+        required: true
+    },
+    VT19: {
+        type: String,
+        required: true
+    },
+    VT20: {
+        type: String,
+        required: true
+    },
+    VT21: {
+        type: String,
+        required: true
+    },
+    VT22: {
+        type: String,
+        required: true
+    },
+    VT23: {
+        type: String,
+        required: true
+    },
+    VT24: {
+        type: String,
+        required: true
+    },
+    VT25: {
+        type: String,
+        required: true
+    },
+    VT26: {
+        type: String,
+        required: true
+    },
+    VT27: {
+        type: String,
+        required: true
+    },
+    VT28: {
+        type: String,
+        required: true
+    },
+    VT29: {
+        type: String,
+        required: true
+    },
+    VT30: {
+        type: String,
+        required: true
+    },
+    VT31: {
+        type: String,
+        required: true
+    },
+    VT32: {
+        type: String,
+        required: true
+    },
+    VT33: {
+        type: String,
+        required: true
+    },
+    VT34: {
+        type: String,
+        required: true
+    },
+    VT35: {
+        type: String,
+        required: true
+    },
+    VT36: {
+        type: String,
+        required: true
+    },
+    VT37: {
+        type: String,
+        required: true
+    },
+    VT38: {
+        type: String,
+        required: true
+    },
+    VT39: {
         type: String,
         required: true
     },
