@@ -13,15 +13,19 @@
     "body-parser": "1.19.0",
     "connect-multiparty": "^2.2.0",
     "cors": "2.8.5",
-    "express": "4.17.0",
+    "express": "^4.17.0",
     "express-fileupload": "1.1.4",
     "jsonwebtoken": "8.5.1",
     "moment": "^2.24.0",
     "mongoose": "^5.5.9",
     "mongoose-auto-increment": "5.0.1",
     "mongoose-unique-validator": "2.0.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
     "nodemailer": "^6.2.1",
+    "path": "^0.12.7",
     "underscore": "1.9.1",
-    "uniqid": "5.0.3"
+    "uniqid": "5.0.3",
+    "uuid": "^8.0.0"
   }
 }
