@@ -25,6 +25,19 @@ const   express     = require('express'),
         estacionServicio = require('../routes/estacionServicio'),
         evidenciaUno = require('../routes/Elemento 1/evidencia1'),
         evidenciaUnoRuta =require('../routes/Elemento 1/evidenciaUno'),
+        evidenciaCuatroRuta = require('../routes/Elemento 4/evidencia'),
+        evidenciaCincoRuta = require('../routes/Elemento 5/evidencia'),
+        evidenciaSeisRuta = require('../routes/Elemento 6/evidencia'),
+        evidenciaSieteRuta = require('../routes/Elemento7/evidencia'),
+        evidenciaDiezRuta = require('../routes/Elemento 10/evidencia'),
+        evidenciaOnceRuta = require('../routes/Elemento 11/evidencia'),
+        evidenciaDoceRuta = require('../routes/Elemento 12/evidencia'),
+        evidenciaTreceRuta = require('../routes/Elemento 13/evidencia'),
+        evidenciaCatorceRuta = require('../routes/Elemento 14/evidencia'),
+        evidenciaQuinceRuta = require('../routes/Elemento 15/evidencia'),
+        evidenciaDieciseisRuta = require('../routes/Elemento 16/evidencia'),
+        evidenciaDiesisiete = require('../routes/Elemento 17/evidencia'),
+        evidenciaDiesiocho = require('../routes/Elemento18/evidencia'),
         app = express(),
         cors = require('cors');
 
@@ -46,7 +59,7 @@ const   express     = require('express'),
     //Morga y multer para subie imagenes o documentos.
     app.use(morgan('dev'));
     const storage = multer.diskStorage({
-        destination: path.join(__dirname, '../subidas'),
+        destination: path.join(__dirname, '../Evidencias'),
         filename: (req, file, cb, filename)=>{
             console.log(file);
             cb(null, uuid() +path.extname(file.originalname));
@@ -56,6 +69,20 @@ const   express     = require('express'),
     app.use(multer({storage}).single('image'));
 
     app.use('/img',evidenciaUnoRuta);
+    app.use('/evidencia4',evidenciaCuatroRuta);
+    app.use('/evidencia5',evidenciaCincoRuta);
+    app.use('/evidencia6',evidenciaSeisRuta);
+    app.use('/evidencia7',evidenciaSieteRuta);
+    app.use('/evidencia10',evidenciaDiezRuta);
+    app.use('/evidencia11',evidenciaOnceRuta);
+    app.use('/evidencia12',evidenciaDoceRuta);
+    app.use('/evidencia13',evidenciaTreceRuta);
+    app.use('/evidencia14',evidenciaCatorceRuta);
+    app.use('/evidencia15',evidenciaQuinceRuta);
+    app.use('/evidencia16',evidenciaDieciseisRuta);
+    app.use('/evidencia17',evidenciaDiesisiete);
+    app.use('/evidencia18',evidenciaDiesiocho);
+
 
     app.use('/user', UsuarioRoutes);
     app.use('/user/login', LoginRoutes);

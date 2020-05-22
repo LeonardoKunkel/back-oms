@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const evidenciaFicherosSchema = new mongoose.Schema({
+const evidenciaSchema = new mongoose.Schema({
     title: {type:String},
     description: {type: String},
     filename: {type: String},
@@ -11,4 +11,4 @@ const evidenciaFicherosSchema = new mongoose.Schema({
     created_at:{type: Date, default: Date.now()}
 })
 
-module.exports = mongoose.model('Evidencia Elemento Doce', evidenciaFicherosSchema);
+module.exports = mongoose.model('Evidencia Elemento Dieciocho',evidenciaSchema);
