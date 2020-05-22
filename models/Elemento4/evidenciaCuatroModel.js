@@ -1,21 +1,14 @@
 const mongoose = require('mongoose')
 
 const evidenciaCuatroSchema = new mongoose.Schema({
-    archivo:{
-        type : String
-    },
-    foto:{
-        type : String
-    
-    },
-    imagen:{
-        type : String
-        
-    },
-    descripcion:{
-        type: String,
-        required: true,
-        default: "falta Campo"
-    }
+    title: {type: String},
+    description: {type: String},
+    filename:{type: String},
+    path:{type: String},
+    originalname:{type: String},
+    mimetype:{type: String},
+    size:{type: Number},
+    created_at:{type: Date, default: Date.now()}
+
 });
 module.exports = mongoose.model("evidenciaCuatro",evidenciaCuatroSchema);
