@@ -1,8 +1,8 @@
 const express = require('express'),
-      Imagen = require('../../models/Elemento1/evidenciaUnoModel'),
+      Imagen = require('../../models/Elemento 14/evidenciaModel'),
       {verificarToken} = require('../../server/middlewares/auth'),
       app = express();
-//consultas
+
     app.get('/',(req,res)=>{
         Imagen.find().exec((err,imagenes) =>{
             if(err){
@@ -17,7 +17,7 @@ const express = require('express'),
             })
         })
     })
-//crear
+
     app.post('/create',(req,res) =>{
         let body = req.body;
         let file = req.file;

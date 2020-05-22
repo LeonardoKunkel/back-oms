@@ -51,4 +51,21 @@ const express = require('express'),
               })
           })
       })
+
+      router.get('/:id',[verificarToken],(req,res)=>{
+          let id = req.params.id;
+          estacionServicio.findById(id).exec((err,estacion)=>{
+              if(err){
+                  return res.status(400).json({
+                      message:'No se pudo encontrar esa estacion',
+                      err
+                  })
+              }
+
+              res.status(200).json({
+                  ok:true,
+                  estacion
+              })
+          })
+      })
       module.exports = router;

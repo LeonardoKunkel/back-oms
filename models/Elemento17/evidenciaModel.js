@@ -11,4 +11,4 @@ const evidenciaFicherosSchema = new mongoose.Schema({
     created_at:{type: Date, default: Date.now()}
 })
 
-module.exports = mongoose.model('Evidencia Elemento Doce', evidenciaFicherosSchema);
+module.exports = mongoose.model('Evidencia Elemento diecisiete', evidenciaFicherosSchema);
