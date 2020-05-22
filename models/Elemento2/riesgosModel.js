@@ -1,221 +1,168 @@
 const mongoose = require('mongoose');
 
-const riesgosModelSchema = new mongoose.Schema ({
+const riesgosSchema = new mongoose.Schema ({
     F1: {
-        type: String,
-        required: true
+        type: String
     },
     F2: {
-        type: String,
-        required: true
+        type: String
     },
     F3: {
-        type: String,
-        required: true
+        type: String
     },
     F4: {
-        type: String,
-        required: true
+        type: String
     },
     F5: {
-        type: String,
-        required: true
+        type: String
     },
     F6: {
-        type: String,
-        required: true
+        type: String
     },
     F7: {
-        type: String,
-        required: true
+        type: String
     },
     F8: {
-        type: String,
-        required: true
+        type: String
     },
     F9: {
-        type: String,
-        required: true
+        type: String
     },
     F10: {
-        type: String,
-        required: true
+        type: String
     },
     F11: {
-        type: String,
-        required: true
+        type: String
     },
     F12: {
-        type: String,
-        required: true
+        type: String
     },
     F13: {
-        type: String,
-        required: true
+        type: String
     },
     F14: {
-        type: String,
-        required: true
+        type: String
     },
     F15: {
-        type: String,
-        required: true
+        type: String
     },
     F16: {
-        type: String,
-        required: true
+        type: String
     },
     F17: {
-        type: String,
-        required: true
+        type: String
     },
     F18: {
-        type: String,
-        required: true
+        type: String
     },
     C1: {
-        type: String,
-        required: true
+        type: String
     },
     C2: {
-        type: String,
-        required: true
+        type: String
     },
     C3: {
-        type: String,
-        required: true
+        type: String
     },
     C4: {
-        type: String,
-        required: true
+        type: String
     },
     C5: {
-        type: String,
-        required: true
+        type: String
     },
     C6: {
-        type: String,
-        required: true
+        type: String
     },
     C7: {
-        type: String,
-        required: true
+        type: String
     },
     C8: {
-        type: String,
-        required: true
+        type: String
     },
     C9: {
-        type: String,
-        required: true
+        type: String
     },
     C10: {
-        type: String,
-        required: true
+        type: String
     },
     C11: {
-        type: String,
-        required: true
+        type: String
     },
     C12: {
-        type: String,
-        required: true
+        type: String
     },
     C13: {
-        type: String,
-        required: true
+        type: String
     },
     C14: {
-        type: String,
-        required: true
+        type: String
     },
     C15: {
-        type: String,
-        required: true
+        type: String
     },
     C16: {
-        type: String,
-        required: true
+        type: String
     },
     C17: {
-        type: String,
-        required: true
+        type: String
     },
     C18: {
-        type: String,
-        required: true
+        type: String
     },
     M1: {
-        type: String,
-        required: true
+        type: String
     },
     M2: {
-        type: String,
-        required: true
+        type: String
     },
     M3: {
-        type: String,
-        required: true
+        type: String
     },
     M4: {
-        type: String,
-        required: true
+        type: String
     },
     M5: {
-        type: String,
-        required: true
+        type: String
     },
     M6: {
-        type: String,
-        required: true
+        type: String
     },
     M7: {
-        type: String,
-        required: true
+        type: String
     },
     M8: {
-        type: String,
-        required: true
+        type: String
     },
     M9: {
-        type: String,
-        required: true
+        type: String
     },
     M10: {
-        type: String,
-        required: true
+        type: String
     },
     M11: {
-        type: String,
-        required: true
+        type: String
     },
     M12: {
-        type: String,
-        required: true
+        type: String
     },
     M13: {
-        type: String,
-        required: true
+        type: String
     },
     M14: {
-        type: String,
-        required: true
+        type: String
     },
     M15: {
-        type: String,
-        required: true
+        type: String
     },
     M16: {
-        type: String,
-        required: true
+        type: String
     },
     M17: {
-        type: String,
-        required: true
+        type: String
     },
     M18: {
-        type: String,
-        required: true
+        type: String
     },
-})
-module.exports = mongoose.model('Riesgos_Asociados', riesgosModelSchema);
+});
+
+module.exports = mongoose.model('Riesgos_Asociados', riesgosSchema);

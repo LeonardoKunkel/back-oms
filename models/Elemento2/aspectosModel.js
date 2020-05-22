@@ -1,461 +1,474 @@
-const mongoose = require('mongoose');
+const mongoose = require ('mongoose');
 
-const aspectosModelSchema = new mongoose.Schema ({
+const aspectosSchema = new mongoose.Schema ({
     F1: {
-        type: String,
-        required: true
+        type: String
     },
     F2: {
-        type: String,
-        required: true
+        type: String
     },
     F3: {
-        type: String,
-        required: true
+        type: String
     },
     F4: {
-        type: String,
-        required: true
+        type: String
     },
     F5: {
-        type: String,
-        required: true
+        type: String
     },
     F6: {
-        type: String,
-        required: true
+        type: String
     },
     F7: {
-        type: String,
-        required: true
+        type: String
     },
     F8: {
-        type: String,
-        required: true
+        type: String
     },
     F9: {
-        type: String,
-        required: true
+        type: String
     },
     F10: {
-        type: String,
-        required: true
+        type: String
     },
     F11: {
-        type: String,
-        required: true
+        type: String
     },
     F12: {
-        type: String,
-        required: true
+        type: String
     },
     F13: {
-        type: String,
-        required: true
+        type: String
     },
     F14: {
-        type: String,
-        required: true
+        type: String
     },
     F15: {
-        type: String,
-        required: true
+        type: String
     },
     F16: {
-        type: String,
-        required: true
+        type: String
     },
     F17: {
-        type: String,
-        required: true
+        type: String
     },
     F18: {
-        type: String,
-        required: true
+        type: String
     },
     F19: {
-        type: String,
-        required: true
+        type: String
     },
     F20: {
-        type: String,
-        required: true
+        type: String
     },
     F21: {
-        type: String,
-        required: true
+        type: String
     },
     F22: {
-        type: String,
-        required: true
+        type: String
     },
     F23: {
-        type: String,
-        required: true
+        type: String
     },
     F24: {
-        type: String,
-        required: true
+        type: String
     },
     F25: {
-        type: String,
-        required: true
+        type: String
     },
     F26: {
-        type: String,
-        required: true
+        type: String
     },
     F27: {
-        type: String,
-        required: true
+        type: String
     },
     F28: {
-        type: String,
-        required: true
+        type: String
     },
     F29: {
-        type: String,
-        required: true
+        type: String
     },
     F30: {
-        type: String,
-        required: true
+        type: String
     },
     F31: {
-        type: String,
-        required: true
+        type: String
     },
     F32: {
-        type: String,
-        required: true
+        type: String
     },
     F33: {
-        type: String,
-        required: true
+        type: String
     },
     F34: {
-        type: String,
-        required: true
+        type: String
     },
     F35: {
-        type: String,
-        required: true
+        type: String
     },
     F36: {
-        type: String,
-        required: true
+        type: String
     },
     F37: {
-        type: String,
-        required: true
+        type: String
     },
     F38: {
-        type: String,
-        required: true
+        type: String
+    },
+    F39: {
+        type: String
     },
     N1: {
-        type: String,
-        required: true
+        type: String
     },
     N2: {
-        type: String,
-        required: true
+        type: String
     },
     N3: {
-        type: String,
-        required: true
+        type: String
     },
     N4: {
-        type: String,
-        required: true
+        type: String
     },
     N5: {
-        type: String,
-        required: true
+        type: String
     },
     N6: {
-        type: String,
-        required: true
+        type: String
     },
     N7: {
-        type: String,
-        required: true
+        type: String
     },
     N8: {
-        type: String,
-        required: true
+        type: String
     },
     N9: {
-        type: String,
-        required: true
+        type: String
     },
     N10: {
-        type: String,
-        required: true
+        type: String
     },
     N11: {
-        type: String,
-        required: true
+        type: String
     },
     N12: {
-        type: String,
-        required: true
+        type: String
     },
     N13: {
-        type: String,
-        required: true
+        type: String
     },
     N14: {
-        type: String,
-        required: true
+        type: String
     },
     N15: {
-        type: String,
-        required: true
+        type: String
     },
     N16: {
-        type: String,
-        required: true
+        type: String
     },
     N17: {
-        type: String,
-        required: true
+        type: String
     },
     N18: {
-        type: String,
-        required: true
+        type: String
     },
     N19: {
-        type: String,
-        required: true
+        type: String
     },
     N20: {
-        type: String,
-        required: true
+        type: String
     },
     N21: {
-        type: String,
-        required: true
+        type: String
     },
     N22: {
-        type: String,
-        required: true
+        type: String
     },
     N23: {
-        type: String,
-        required: true
+        type: String
     },
     N24: {
-        type: String,
-        required: true
+        type: String
     },
     N25: {
-        type: String,
-        required: true
+        type: String
     },
     N26: {
-        type: String,
-        required: true
+        type: String
     },
     N27: {
-        type: String,
-        required: true
+        type: String
     },
     N28: {
-        type: String,
-        required: true
+        type: String
     },
     N29: {
-        type: String,
-        required: true
+        type: String
     },
     N30: {
-        type: String,
-        required: true
+        type: String
     },
     N31: {
-        type: String,
-        required: true
+        type: String
     },
     N32: {
-        type: String,
-        required: true
+        type: String
     },
     N33: {
-        type: String,
-        required: true
+        type: String
     },
     N34: {
-        type: String,
-        required: true
+        type: String
     },
     N35: {
-        type: String,
-        required: true
+        type: String
     },
     N36: {
-        type: String,
-        required: true
+        type: String
     },
     N37: {
-        type: String,
-        required: true
+        type: String
     },
     N38: {
-        type: String,
-        required: true
+        type: String
+    },
+    N39: {
+        type: String
     },
     M1: {
-        type: String,
-        required: true
+        type: String
     },
     M2: {
-        type: String,
-        required: true
+        type: String
     },
     M3: {
-        type: String,
-        required: true
+        type: String
     },
     M4: {
-        type: String,
-        required: true
+        type: String
     },
     M5: {
-        type: String,
-        required: true
+        type: String
     },
     M6: {
-        type: String,
-        required: true
+        type: String
     },
     M7: {
-        type: String,
-        required: true
+        type: String
     },
     M8: {
-        type: String,
-        required: true
+        type: String
     },
     M9: {
-        type: String,
-        required: true
+        type: String
     },
     M10: {
-        type: String,
-        required: true
+        type: String
     },
     M11: {
-        type: String,
-        required: true
+        type: String
     },
     M12: {
-        type: String,
-        required: true
+        type: String
     },
     M13: {
-        type: String,
-        required: true
+        type: String
     },
     M14: {
-        type: String,
-        required: true
+        type: String
     },
     M15: {
-        type: String,
-        required: true
+        type: String
     },
     M16: {
-        type: String,
-        required: true
+        type: String
     },
     M17: {
-        type: String,
-        required: true
+        type: String
     },
     M18: {
-        type: String,
-        required: true
+        type: String
     },
     M19: {
-        type: String,
-        required: true
+        type: String
     },
     M20: {
-        type: String,
-        required: true
+        type: String
     },
     M21: {
-        type: String,
-        required: true
+        type: String
     },
     M22: {
-        type: String,
-        required: true
+        type: String
     },
     M23: {
-        type: String,
-        required: true
+        type: String
     },
     M24: {
-        type: String,
-        required: true
+        type: String
     },
     M25: {
-        type: String,
-        required: true
+        type: String
     },
     M26: {
-        type: String,
-        required: true
+        type: String
     },
     M27: {
-        type: String,
-        required: true
+        type: String
     },
     M28: {
-        type: String,
-        required: true
+        type: String
     },
     M29: {
-        type: String,
-        required: true
+        type: String
     },
     M30: {
-        type: String,
-        required: true
+        type: String
     },
     M31: {
-        type: String,
-        required: true
+        type: String
     },
     M32: {
-        type: String,
-        required: true
+        type: String
     },
     M33: {
-        type: String,
-        required: true
+        type: String
     },
     M34: {
-        type: String,
-        required: true
+        type: String
     },
     M35: {
-        type: String,
-        required: true
+        type: String
     },
     M36: {
-        type: String,
-        required: true
+        type: String
     },
     M37: {
-        type: String,
-        required: true
+        type: String
     },
     M38: {
-        type: String,
-        required: true
+        type: String
     },
-})
-module.exports = mongoose.model('Aspectos_Ambientales', aspectosModelSchema);
+    M39: {
+        type: String
+    },
+    VT1: {
+        type: String
+    },
+    VT2: {
+        type: String
+    },
+    VT3: {
+        type: String
+    },
+    VT4: {
+        type: String
+    },
+    VT5: {
+        type: String
+    },
+    VT6: {
+        type: String
+    },
+    VT7: {
+        type: String
+    },
+    VT8: {
+        type: String
+    },
+    VT9: {
+        type: String
+    },
+    VT10: {
+        type: String
+    },
+    VT11: {
+        type: String
+    },
+    VT12: {
+        type: String
+    },
+    VT13: {
+        type: String
+    },
+    VT14: {
+        type: String
+    },
+    VT15: {
+        type: String
+    },
+    VT16: {
+        type: String
+    },
+    VT17: {
+        type: String
+    },
+    VT18: {
+        type: String
+    },
+    VT19: {
+        type: String
+    },
+    VT20: {
+        type: String
+    },
+    VT21: {
+        type: String
+    },
+    VT22: {
+        type: String
+    },
+    VT23: {
+        type: String
+    },
+    VT24: {
+        type: String
+    },
+    VT25: {
+        type: String
+    },
+    VT26: {
+        type: String
+    },
+    VT27: {
+        type: String
+    },
+    VT28: {
+        type: String
+    },
+    VT29: {
+        type: String
+    },
+    VT30: {
+        type: String
+    },
+    VT31: {
+        type: String
+    },
+    VT32: {
+        type: String
+    },
+    VT33: {
+        type: String
+    },
+    VT34: {
+        type: String
+    },
+    VT35: {
+        type: String
+    },
+    VT36: {
+        type: String
+    },
+    VT37: {
+        type: String
+    },
+    VT38: {
+        type: String
+    },
+    VT39: {
+        type: String
+    },
+});
+
+module.exports = mongoose.model('Aspectos_Ambientales', aspectosSchema);
