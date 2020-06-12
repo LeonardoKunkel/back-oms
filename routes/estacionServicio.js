@@ -68,4 +68,48 @@ const express = require('express'),
               })
           })
       })
+
+      router.put('/:id',(req, res)=>{
+          let id = req.params.id;
+          let body2 = req.body;
+
+          estacionServicio.findById(id,(err,estacionService)=>{
+            if (err) {
+              return res.status(400).json({
+                  ok:true,
+                  message:'No se encontro el id solicitado',
+                  err
+              })  
+            }
+            if (!estacionService) {
+                return res.status(500).json({
+                    ok:true,
+                    message:'La estacion con este id no existe'
+                })
+            }
+            estacionService.nombreEstacionServicio = body2.nombreEstacionServicio,
+            estacionService.estado = body2.estado,
+            estacionService.ciudad = body2.ciudad,
+            estacionService.colonia = body2.colonia,
+            estacionService.cp = body2.cp,
+            estacionService.calleNumero = body2.calleNumero,
+            estacionService.correoElectronico = body2.correoElectronico,
+            estacionService.telefono = body2.telefono,
+            estacionService.gerenteEstacion = body2.gerenteEstacion,
+            estacionService.representanteTecnico = body2.representanteTecnico,
+            estacionService.maximaAutoridad = body2.maximaAutoridad
+
+            estacionService.save((err, estacionActualizada) =>{
+                if (err) {
+                    return res.status(400).json({
+                        ok:false,
+                        message:'Error al actualizar'
+                    })                    
+                }
+                res.status(200).json({
+                    estacionActualizada
+                })
+            })
+          })
+      })
       module.exports = router;

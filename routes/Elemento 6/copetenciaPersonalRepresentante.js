@@ -9,12 +9,11 @@ const express = require('express'),
         const body = req.body;
         console.log(body)
         let newDatos = {
-
-            caracteristicasPersonales: body.caracteristicasPersonales,
             requerimientosFisicos: body.requerimientosFisicos,
             herramientasEquipos: body.herramientasEquipos,
             equipoProteccion: body.equipoProteccion,
-
+            nivelAcademico: body.nivelAcademico,
+            personalCargo: body.personalCargo
         }
 
         copetenciaPersonalRepresentante.create(newDatos,(err,  crearCopetenciaPersonalRepresentante)=>{
@@ -29,5 +28,19 @@ const express = require('express'),
                 crearCopetenciaPersonalRepresentante
             })
         })
+      })
+    
+      router.get('/',(req,res) =>{
+          copetenciaPersonalRepresentante.find((err,newRepresentante)=>{
+             if (err) {
+                 res.status(400).json({
+                    ok:true,
+                    message:'No se pudo'
+                 })
+             }
+             res.status(200).json({
+                 newRepresentante
+             })
+          })
       })
       module.exports = router;
