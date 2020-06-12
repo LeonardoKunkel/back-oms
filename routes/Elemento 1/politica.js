@@ -64,5 +64,21 @@ const express = require('express'),
                     politics: usuarioDB
                 });
             })
+        }) 
+
+        router.get('/:id',(req, res) =>{
+            let id = req.params.id;
+            politicas.findById(id,(err, newFindPolitica) =>{
+                if (err) {
+                    res.status(404).json({
+                        ok:false,
+                        message:'No se encontro la politica con el id',
+                        err
+                    })
+                }
+                res.status(200).json({
+                    newFindPolitica
+                })
+            })
         })
       module.exports = router;

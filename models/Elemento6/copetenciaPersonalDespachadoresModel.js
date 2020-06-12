@@ -1,22 +1,20 @@
 const mongoose = require('mongoose')
 
 const copeteciaPersonalDespachadoresSchema = new mongoose.Schema({
-
-    caracteristicasPersonales:{ 
-        type:String,
-        required:true
-    },
     requerimientosFisicos:{ 
-        type:String,
-        required:true
+        type:String
     },
     herramientasEquipos:{ 
-        type:String,
-        required:true
+        type:String
     },
     equipoProteccion:{ 
-        type:String,
-        required:true
+        type:String
+    },
+    nivelAcademico:{
+        type:String
+    },
+    personalCargo:{
+        type:String
     },
 
 })

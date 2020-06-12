@@ -1,22 +1,20 @@
 const mongoose = require ('mongoose');
 
 const copetenciaPersonalEncargadoSchema = new mongoose.Schema({
-
-    caracteristicasPersonales:{
-        type:String,
-        required:true
+    requerimientosFisicos:{ 
+        type:String
     },
-    requerimientosFisicos:{
-        type:String,
-        required:true
+    herramientasEquipos:{ 
+        type:String
     },
-    herramientasEquipos:{
-        type:String,
-        required:true
+    equipoProteccion:{ 
+        type:String
     },
-    equipoProteccion:{
-        type:String,
-        required:true
+    nivelAcademico:{
+        type:String
+    },
+    personalCargo:{
+        type:String
     }
 
 })
