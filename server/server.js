@@ -42,7 +42,9 @@ const   express     = require('express'),
         evidenciaDieciseisRuta = require('../routes/Elemento 16/evidencia'),
         evidenciaDiesisiete = require('../routes/Elemento 17/evidencia'),
         evidenciaDiesiocho = require('../routes/Elemento18/evidencia'),
-
+        iconosEstacion = require('../routes/iconosEstacionRutas'),
+        marcaAguaEstacion = require('../routes/marcaAguaRuta'),
+        firmaEstacion = require('../routes/firmaRuta'),
         app = express(),
         cors = require('cors');
 
@@ -108,6 +110,9 @@ const   express     = require('express'),
     app.use('/lista', lista);
     app.use('/riesgos', riesgos);
     app.use('/aspectos', aspectos);
+    app.use('/iconosEstacion',iconosEstacion);
+    app.use('/marcaAgua',marcaAguaEstacion);
+    app.use('/firmaEstacion',firmaEstacion)
 
     // app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
     // app.use('')

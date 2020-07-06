@@ -2,171 +2,171 @@ const mongoose = require('mongoose');
 
 const listaModelSchema = new mongoose.Schema ({
     C1: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C2: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C3: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C4: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C5: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C6: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C7: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C8: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C9: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C10: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C11: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C12: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C13: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C14: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C15: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C16: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C17: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C18: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C19: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C20: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C21: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C22: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C23: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C24: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C25: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C26: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C27: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C28: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C29: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C30: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C31: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C32: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C33: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C34: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C35: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C36: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C37: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C38: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C39: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C40: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C41: {
-        type: String,
+        type: Boolean,
         required: '',
     },
     C42: {
-        type: String,
+        type: Boolean,
         required: '',
     },
 });

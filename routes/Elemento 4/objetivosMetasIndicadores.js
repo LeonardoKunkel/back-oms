@@ -13,8 +13,7 @@ const express = require('express'),
           reduccionConsumoEnergia : body.reduccionConsumoEnergia,
           cumplimientoProgramaMantenimiento :body.cumplimientoProgramaMantenimiento,
           mejorarActividadesSimulacros: body.mejorarActividadesSimulacros,
-          incrementarCapacitaciones: body.incrementarCapacitaciones,
-          mejorarServicioAtencionCliente:body.mejorarServicioAtencionCliente,
+          incrementarCapacitaciones: body.incrementarCapacitaciones, 
           incrementarVentaAnualmente: body.incrementarVentaAnualmente
             
         }

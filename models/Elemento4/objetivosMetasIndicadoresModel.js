@@ -3,28 +3,22 @@ const mongoose = require('mongoose')
 const ObjetivosMetasIndicadoresSchema = new mongoose.Schema({
 
   reduccionGeneracionResiduos:{
-    type : String
+    type : Boolean
   },
   reduccionConsumoAgua:{ 
-    type:String,
+    type : Boolean
   },
   reduccionConsumoEnergia : { 
-    type:String,
+    type : Boolean
   },
   cumplimientoProgramaMantenimiento : { 
-    type:String,
-  },
-  mejorarActividadesSimulacros:{ 
-    type:String,
+    type : Boolean
   },
   incrementarCapacitaciones:{
-    type:String,
+    type : Boolean
   },
-  mejorarServicioAtencionCliente:{ 
-    type:String,
-  },
-  incrementarVentaAnualmente:{ 
-    type:String,
+  incrementarVentaAnualmente:{
+    type : Boolean
   },
  
 });
