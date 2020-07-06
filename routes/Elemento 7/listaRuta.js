@@ -1,9 +1,9 @@
 const express = require('express'),
       listaModel = require('../../models/Elemento7/listaModel'),
-      { verificarToken } = require('../../server/middlewares/auth'),
+     // { verificarToken } = require('../../server/middlewares/auth'),
       router = express.Router();
       
-router.post('/create',[verificarToken],(req, res) => {
+router.post('/create',(req, res) => {
     const body = req.body;
     console.log(body);
     
@@ -65,4 +65,37 @@ router.post('/create',[verificarToken],(req, res) => {
         });
     });
 });
+
+//Consultar en la base de datos
+router.get('/',(req,res) =>{
+listaModel.find().exec((err,findLista)=>{
+   if(err){
+      res.status(400).json({
+        message:'No se pudo traer politica',
+        err
+      })
+   }
+   res.status(200).json({
+       ok:true,
+       findLista
+   })
+})
+})
+
+router.get('/:id',(req, res) =>{
+    let id = req.params.id;
+    listaModel.findById(id,(err,newFindLista ) =>{
+        if (err) {
+            res.status(404).json({
+                ok: false,
+                message:'No se encontro el dato consultado',
+                err
+            })
+        }
+        res.status(200).json({
+            newFindLista
+        })
+    })
+})
+
 module.exports = router;
