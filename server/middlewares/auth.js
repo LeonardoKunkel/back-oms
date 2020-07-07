@@ -16,7 +16,7 @@ function verificarToken (req, res, next) {
         }
         req.user = decoded
         next();
-    })
+    });
 }
 
 function verificaAdmin (req, res, next) {
@@ -26,7 +26,7 @@ function verificaAdmin (req, res, next) {
         if(err){
             return res.json({
                 err
-            })
+            });
         }
 
         if(decoded.user.role === 'ADMIN_ROLE') {
@@ -36,9 +36,9 @@ function verificaAdmin (req, res, next) {
                 err: {
                     message: 'El usuario no es Admin'
                 }
-            })
+            });
         }
-    })
+    });
 }
 
 module.exports = {verificarToken};
