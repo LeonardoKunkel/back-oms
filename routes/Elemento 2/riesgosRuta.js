@@ -76,4 +76,19 @@ router.post('/create', [verificarToken], (req, res) => {
         });
     });
 });
+
+router.get('/',[verificarToken],(req,res) =>{
+    riesgosModel.find().exec((err,findRiesgos) =>{
+        if (err) {
+            res.status(400).json({
+                ok:true,
+                findRiesgos
+            })
+        }
+        res.status(200).json({
+            ok:true,
+            findRiesgos
+        })
+    })
+})
 module.exports = router;
