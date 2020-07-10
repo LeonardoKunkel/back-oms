@@ -178,4 +178,19 @@ router.post('/create', [verificarToken], (req,res) => {
         });
     });
 });
+// CONSULTAR EN LA BASE DE DATOS
+router.get('/',[verificarToken],(req,res) =>{
+    aspectosModel.find().exec((err,findAspectos)=>{
+        if (err) {
+            res.status(400).json({
+                message:'No se encontraron los aspectos',
+                err
+            })
+        }
+        res.status(200).json({
+            ok:true,
+            findAspectos
+        })
+    })
+})
 module.exports = router;
