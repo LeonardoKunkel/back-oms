@@ -26,7 +26,7 @@ const express = require('express'),
 
       //Consultar en la base de datos
  router.get('/',(req,res) =>{
-     iconosEstacionModel.find().exec((err,findPolitica)=>{
+     iconosEstacionModel.find().exec((err,findPolitica) => {
          if(err){
             res.status(400).json({
               message:'No se pudo traer iconos',

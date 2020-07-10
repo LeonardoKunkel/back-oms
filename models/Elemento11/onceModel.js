@@ -2,91 +2,116 @@ const mongoose = require ('mongoose');
 
 const onceSchema = new mongoose.Schema ({
     check1: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check2: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check3: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check4: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check5: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check6: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check7: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check8: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check9: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check10: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check11: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check12: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check13: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check14: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check15: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check16: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check17: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check18: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check19: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check20: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check21: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check22: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check23: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check24: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check25: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check26: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check27: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     check28: {
-        type: Boolean
-    },
-    check29: {
-        type: Boolean
+        type: Boolean,
+        // required: '',
     },
     num1: {
         type: Number
