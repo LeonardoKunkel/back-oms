@@ -35,7 +35,6 @@ router.post('/create', [verificarToken], (req, res) => {
         check26: body.check26,
         check27: body.check27,
         check28: body.check28,
-        check29: body.check29,
         num1: body.num1,
         num2: body.num2,
         num3: body.num3,
@@ -69,4 +68,20 @@ router.post('/create', [verificarToken], (req, res) => {
         });
     });
 });
+
+router.get('/', [verificarToken], (req, res) => {
+    onceModel.find().exec((err, findOnce) => {
+        if (err) {
+            res.status(400).json({
+                ok: true,
+                findOnce
+            });
+        }
+        res.status(200).json({
+            ok: true,
+            findOnce
+        });
+    });
+});
+
 module.exports = router;

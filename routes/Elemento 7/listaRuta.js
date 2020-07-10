@@ -67,35 +67,35 @@ router.post('/create',(req, res) => {
 });
 
 //Consultar en la base de datos
-router.get('/',(req,res) =>{
-listaModel.find().exec((err,findLista)=>{
-   if(err){
-      res.status(400).json({
-        message:'No se pudo traer politica',
-        err
-      })
-   }
-   res.status(200).json({
-       ok:true,
-       findLista
-   })
-})
-})
+router.get('/',(req, res) => {
+    listaModel.find().exec((err, findLista) => {
+        if (err) {
+          res.status(400).json({
+            message:'No se pudo traer politica',
+            err
+          });
+        }
+        res.status(200).json({
+           ok:true,
+           findLista
+        });
+    });
+});
 
-router.get('/:id',(req, res) =>{
+router.get('/:id',(req, res) => {
     let id = req.params.id;
-    listaModel.findById(id,(err,newFindLista ) =>{
+    listaModel.findById(id,(err, newFindLista) => {
         if (err) {
             res.status(404).json({
                 ok: false,
                 message:'No se encontro el dato consultado',
                 err
-            })
+            });
         }
         res.status(200).json({
             newFindLista
-        })
-    })
-})
+        });
+    });
+});
 
 module.exports = router;
