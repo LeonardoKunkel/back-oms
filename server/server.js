@@ -42,6 +42,7 @@ const   express     = require('express'),
         evidenciaDieciseisRuta = require('../routes/Elemento 16/evidencia'),
         evidenciaDiesisiete = require('../routes/Elemento 17/evidencia'),
         evidenciaDiesiocho = require('../routes/Elemento18/evidencia'),
+        onceEquipo = require('../routes/Elemento 11/onceRuta'),
         iconosEstacion = require('../routes/iconosEstacionRutas'),
         marcaAguaEstacion = require('../routes/marcaAguaRuta'),
         firmaEstacion = require('../routes/firmaRuta'),
@@ -115,6 +116,9 @@ const   express     = require('express'),
     app.use('/marcaAgua',marcaAguaEstacion);
     app.use('/firmaEstacion',firmaEstacion);
     app.use('/firmaRepresentante',firmaRepresentante);
+    app.use('/equipoCritico', onceEquipo);
+
+
     // app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
     // app.use('')
 
