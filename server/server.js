@@ -45,6 +45,7 @@ const   express     = require('express'),
         iconosEstacion = require('../routes/iconosEstacionRutas'),
         marcaAguaEstacion = require('../routes/marcaAguaRuta'),
         firmaEstacion = require('../routes/firmaRuta'),
+        firmaRepresentante = require('../routes/firmaRepresentanteruta'),
         app = express(),
         cors = require('cors');
 
@@ -112,8 +113,8 @@ const   express     = require('express'),
     app.use('/aspectos', aspectos);
     app.use('/iconosEstacion',iconosEstacion);
     app.use('/marcaAgua',marcaAguaEstacion);
-    app.use('/firmaEstacion',firmaEstacion)
-
+    app.use('/firmaEstacion',firmaEstacion);
+    app.use('/firmaRepresentante',firmaRepresentante);
     // app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
     // app.use('')
 
