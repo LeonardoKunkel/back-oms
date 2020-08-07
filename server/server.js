@@ -29,6 +29,7 @@ const   express     = require('express'),
         lista = require('../routes/Elemento 7/listaRuta'),
         riesgos = require('../routes/Elemento 2/riesgosRuta'),
         aspectos = require('../routes/Elemento 2/aspectosRuta'),
+        evaluacionXIV = require('../routes/Elemento 14/evaluacionRuta'),
         evidenciaCuatroRuta = require('../routes/Elemento 4/evidencia'),
         evidenciaCincoRuta = require('../routes/Elemento 5/evidencia'),
         evidenciaSeisRuta = require('../routes/Elemento 6/evidencia'),
@@ -117,6 +118,7 @@ const   express     = require('express'),
     app.use('/firmaEstacion',firmaEstacion);
     app.use('/firmaRepresentante',firmaRepresentante);
     app.use('/equipoCritico', onceEquipo);
+    app.use('/evaluacion', evaluacionXIV);
 
 
     // app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)
