@@ -1,3 +1,5 @@
+;
+
 const express = require('express'),
       Imagen = require('../../models/Elemento1/evidenciaUnoModel'),
       {verificarToken} = require('../../server/middlewares/auth'),
@@ -26,7 +28,7 @@ const express = require('express'),
             title: body.title,
             description: body.description,
             filename: file.filename,
-            path: '../../Evidencias' + req.file.filename,
+            path: 'Evidencias/' + req.file.filename,
             originalname: file.originalname,
             mimetype: file.mimetype,
             size: file.size
@@ -42,6 +44,30 @@ const express = require('express'),
             res.json({
                 ok:true,
                 imagen
+            })
+        })
+    })
+
+    //Eliminar 
+    app.delete('/:id',(req,res) =>{
+        let id = req.params.id;
+        Imagen.findByIdAndRemove(id,(err, imagenBorrada) =>{
+            if (err) {
+                return res.status(400).json({
+                    ok:false,
+                    message: 'No se pudo borrar',
+                    err
+                })
+            }
+            if (!imagenBorrada) {
+                return res.status(400).json({
+                    ok:false,
+                    message: 'No se pudo borrar',
+                    err
+                })
+            }
+            res.status(200).json({
+                imagenBorrada
             })
         })
     })

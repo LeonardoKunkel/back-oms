@@ -66,6 +66,7 @@ const express = require('express'),
             })
         }) 
 
+//Consulta especifica
         router.get('/:id',(req, res) =>{
             let id = req.params.id;
             politicas.findById(id,(err, newFindPolitica) =>{
@@ -78,6 +79,31 @@ const express = require('express'),
                 }
                 res.status(200).json({
                     newFindPolitica
+                })
+            })
+        })
+
+        router.delete('/:id',( req,res) =>{
+            let id = req.params.id;
+    
+            politicas.findByIdAndRemove(id,(err,imagenBorrada) =>{
+                if (err) {
+                    return res.status(400).json({
+                        ok:false,
+                        message: 'No se pudo borrar la imagen',
+                        err
+                    })
+                }
+                if (!imagenBorrada) {
+                    return res.status(400).json({
+                        ok:false,
+                        message: 'No se pudo borrar la imagen',
+                        err
+                    })
+                }
+    
+                res.status(200).json({
+                    imagenBorrada
                 })
             })
         })
