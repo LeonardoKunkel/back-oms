@@ -31,6 +31,7 @@ const   express     = require('express'),
         lista = require('../routes/Elemento 7/listaRuta'),
         riesgos = require('../routes/Elemento 2/riesgosRuta'),
         aspectos = require('../routes/Elemento 2/aspectosRuta'),
+        evaluacionXIV = require('../routes/Elemento 14/evaluacionRuta'),
         evidenciaCuatroRuta = require('../routes/Elemento 4/evidencia'),
         evidenciaCincoRuta = require('../routes/Elemento 5/evidencia'),
         evidenciaSeisRuta = require('../routes/Elemento 6/evidencia'),
@@ -95,7 +96,11 @@ const   express     = require('express'),
         evidenceDocumentElement17 = require('../routes/EvidencesRoutes/Element17Document'),
 
 
-
+        simulacro = require('../routes/Elemento 13/simulacroRuta'),
+        simulacro2 = require('../routes/Elemento 13/simulacro2Ruta'),
+        simulacro3 = require('../routes/Elemento 13/simulacro3Ruta'),
+        simulacro4 = require('../routes/Elemento 13/simulacro4Ruta'),
+        simulacro5 = require('../routes/Elemento 13/simulacro5Ruta'),
         app = express(),
         cors = require('cors');
 
@@ -195,6 +200,12 @@ const   express     = require('express'),
     app.use('/firmaEstacion',firmaEstacion);
     app.use('/firmaRepresentante',firmaRepresentante);
     app.use('/equipoCritico', onceEquipo);
+    app.use('/evaluacion', evaluacionXIV);
+    app.use('/simulacro', simulacro);
+    app.use('/simulacro2', simulacro2);
+    app.use('/simulacro3', simulacro3);
+    app.use('/simulacro4', simulacro4);
+    app.use('/simulacro5', simulacro5);
 
 
     // Rutas pata las graficas eliminarlas tambie

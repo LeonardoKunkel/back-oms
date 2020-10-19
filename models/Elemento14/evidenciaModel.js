@@ -9,6 +9,6 @@ const evidenciaFicherosSchema = new mongoose.Schema({
     mimetype:{type: String},
     size:{type: Number},
     created_at:{type: Date, default: Date.now()}
-})
+});
 
 module.exports = mongoose.model('Evidencia Elemento Catorce', evidenciaFicherosSchema);

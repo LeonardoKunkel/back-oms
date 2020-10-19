@@ -1,12 +1,16 @@
 const express = require('express'),
-      onceModel = require ('../../models/Elemento11/onceModel'),
+      evaluacionModel = require('../../models/Elemento14/evaluacionModel'),
       { verificarToken } = require('../../server/middlewares/auth'),
       router = express.Router();
-      
+
 router.post('/create', [verificarToken], (req, res) => {
     const body = req.body;
     console.log(body);
     let newDatos = {
+        trimestre: body.trimestre,
+        fecha1: body.fecha1,
+        fecha2: body.fecha2,
+        fecha3: body.fecha3,
         check1: body.check1,
         check2: body.check2,
         check3: body.check3,
@@ -29,33 +33,9 @@ router.post('/create', [verificarToken], (req, res) => {
         check20: body.check20,
         check21: body.check21,
         check22: body.check22,
-        check23: body.check23,
-        check24: body.check24,
-        check25: body.check25,
-        check26: body.check26,
-        check27: body.check27,
-        check28: body.check28,
-        num1: body.num1,
-        num2: body.num2,
-        num3: body.num3,
-        num4: body.num4,
-        num5: body.num5,
-        num6: body.num6,
-        num7: body.num7,
-        num8: body.num8,
-        num9: body.num9,
-        num10: body.num10,
-        num11: body.num11,
-        num12: body.num12,
-        num13: body.num13,
-        num14: body.num14,
-        num15: body.num15,
-        num16: body.num16,
-        num17: body.num17,
-        num18: body.num18,
     };
     
-    onceModel.create(newDatos, (err, crearOnce) => {
+    evaluacionModel.create(newDatos, (err, crearEvaluacion) => {
         if (err) {
             res.status(400).json ({
                 message: 'Error al guardar',
@@ -64,22 +44,22 @@ router.post('/create', [verificarToken], (req, res) => {
         }
         res.json ({
             ok: true,
-            crearOnce
+            crearEvaluacion
         });
     });
 });
 
 router.get('/', [verificarToken], (req, res) => {
-    onceModel.find().exec((err, findOnce) => {
+    evaluacionModel.find().exec((err, findEvaluacion) => {
         if (err) {
             res.status(400).json({
                 ok: true,
-                findOnce
+                findEvaluacion
             });
         }
         res.status(200).json({
             ok: true,
-            findOnce
+            findEvaluacion
         });
     });
 });
