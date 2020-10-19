@@ -2,471 +2,588 @@ const mongoose = require ('mongoose');
 
 const aspectosSchema = new mongoose.Schema ({
     F1: {
-        type: String
+        type: Number
     },
     F2: {
-        type: String
+        type: Number
     },
     F3: {
-        type: String
+        type: Number
     },
     F4: {
-        type: String
+        type: Number
     },
     F5: {
-        type: String
+        type: Number
     },
     F6: {
-        type: String
+        type: Number
     },
     F7: {
-        type: String
+        type: Number
     },
     F8: {
-        type: String
+        type: Number
     },
     F9: {
-        type: String
+        type: Number
     },
     F10: {
-        type: String
+        type: Number
     },
     F11: {
-        type: String
+        type: Number
     },
     F12: {
-        type: String
+        type: Number
     },
     F13: {
-        type: String
+        type: Number
     },
     F14: {
-        type: String
+        type: Number
     },
     F15: {
-        type: String
+        type: Number
     },
     F16: {
-        type: String
+        type: Number
     },
     F17: {
-        type: String
+        type: Number
     },
     F18: {
-        type: String
+        type: Number
     },
     F19: {
-        type: String
+        type: Number
     },
     F20: {
-        type: String
+        type: Number
     },
     F21: {
-        type: String
+        type: Number
     },
     F22: {
-        type: String
+        type: Number
     },
     F23: {
-        type: String
+        type: Number
     },
     F24: {
-        type: String
+        type: Number
     },
     F25: {
-        type: String
+        type: Number
     },
     F26: {
-        type: String
+        type: Number
     },
     F27: {
-        type: String
+        type: Number
     },
     F28: {
-        type: String
+        type: Number
     },
     F29: {
-        type: String
+        type: Number
     },
     F30: {
-        type: String
+        type: Number
     },
     F31: {
-        type: String
+        type: Number
     },
     F32: {
-        type: String
+        type: Number
     },
     F33: {
-        type: String
+        type: Number
     },
     F34: {
-        type: String
+        type: Number
     },
     F35: {
-        type: String
+        type: Number
     },
     F36: {
-        type: String
+        type: Number
     },
     F37: {
-        type: String
+        type: Number
     },
     F38: {
-        type: String
+        type: Number
     },
     F39: {
-        type: String
+        type: Number
     },
     N1: {
-        type: String
+        type: Number
     },
     N2: {
-        type: String
+        type: Number
     },
     N3: {
-        type: String
+        type: Number
     },
     N4: {
-        type: String
+        type: Number
     },
     N5: {
-        type: String
+        type: Number
     },
     N6: {
-        type: String
+        type: Number
     },
     N7: {
-        type: String
+        type: Number
     },
     N8: {
-        type: String
+        type: Number
     },
     N9: {
-        type: String
+        type: Number
     },
     N10: {
-        type: String
+        type: Number
     },
     N11: {
-        type: String
+        type: Number
     },
     N12: {
-        type: String
+        type: Number
     },
     N13: {
-        type: String
+        type: Number
     },
     N14: {
-        type: String
+        type: Number
     },
     N15: {
-        type: String
+        type: Number
     },
     N16: {
-        type: String
+        type: Number
     },
     N17: {
-        type: String
+        type: Number
     },
     N18: {
-        type: String
+        type: Number
     },
     N19: {
-        type: String
+        type: Number
     },
     N20: {
-        type: String
+        type: Number
     },
     N21: {
-        type: String
+        type: Number
     },
     N22: {
-        type: String
+        type: Number
     },
     N23: {
-        type: String
+        type: Number
     },
     N24: {
-        type: String
+        type: Number
     },
     N25: {
-        type: String
+        type: Number
     },
     N26: {
-        type: String
+        type: Number
     },
     N27: {
-        type: String
+        type: Number
     },
     N28: {
-        type: String
+        type: Number
     },
     N29: {
-        type: String
+        type: Number
     },
     N30: {
-        type: String
+        type: Number
     },
     N31: {
-        type: String
+        type: Number
     },
     N32: {
-        type: String
+        type: Number
     },
     N33: {
-        type: String
+        type: Number
     },
     N34: {
-        type: String
+        type: Number
     },
     N35: {
-        type: String
+        type: Number
     },
     N36: {
-        type: String
+        type: Number
     },
     N37: {
-        type: String
+        type: Number
     },
     N38: {
-        type: String
+        type: Number
     },
     N39: {
-        type: String
+        type: Number
     },
     M1: {
-        type: String
+        type: Number
     },
     M2: {
-        type: String
+        type: Number
     },
     M3: {
-        type: String
+        type: Number
     },
     M4: {
-        type: String
+        type: Number
     },
     M5: {
-        type: String
+        type: Number
     },
     M6: {
-        type: String
+        type: Number
     },
     M7: {
-        type: String
+        type: Number
     },
     M8: {
-        type: String
+        type: Number
     },
     M9: {
-        type: String
+        type: Number
     },
     M10: {
-        type: String
+        type: Number
     },
     M11: {
-        type: String
+        type: Number
     },
     M12: {
-        type: String
+        type: Number
     },
     M13: {
-        type: String
+        type: Number
     },
     M14: {
-        type: String
+        type: Number
     },
     M15: {
-        type: String
+        type: Number
     },
     M16: {
-        type: String
+        type: Number
     },
     M17: {
-        type: String
+        type: Number
     },
     M18: {
-        type: String
+        type: Number
     },
     M19: {
-        type: String
+        type: Number
     },
     M20: {
-        type: String
+        type: Number
     },
     M21: {
-        type: String
+        type: Number
     },
     M22: {
-        type: String
+        type: Number
     },
     M23: {
-        type: String
+        type: Number
     },
     M24: {
-        type: String
+        type: Number
     },
     M25: {
-        type: String
+        type: Number
     },
     M26: {
-        type: String
+        type: Number
     },
     M27: {
-        type: String
+        type: Number
     },
     M28: {
-        type: String
+        type: Number
     },
     M29: {
-        type: String
+        type: Number
     },
     M30: {
-        type: String
+        type: Number
     },
     M31: {
-        type: String
+        type: Number
     },
     M32: {
-        type: String
+        type: Number
     },
     M33: {
-        type: String
+        type: Number
     },
     M34: {
-        type: String
+        type: Number
     },
     M35: {
-        type: String
+        type: Number
     },
     M36: {
-        type: String
+        type: Number
     },
     M37: {
-        type: String
+        type: Number
     },
     M38: {
-        type: String
+        type: Number
     },
     M39: {
-        type: String
+        type: Number
     },
     VT1: {
-        type: String
+        type: Number
     },
     VT2: {
-        type: String
+        type: Number
     },
     VT3: {
-        type: String
+        type: Number
     },
     VT4: {
-        type: String
+        type: Number
     },
     VT5: {
-        type: String
+        type: Number
     },
     VT6: {
-        type: String
+        type: Number
     },
     VT7: {
-        type: String
+        type: Number
     },
     VT8: {
-        type: String
+        type: Number
     },
     VT9: {
-        type: String
+        type: Number
     },
     VT10: {
-        type: String
+        type: Number
     },
     VT11: {
-        type: String
+        type: Number
     },
     VT12: {
-        type: String
+        type: Number
     },
     VT13: {
-        type: String
+        type: Number
     },
     VT14: {
-        type: String
+        type: Number
     },
     VT15: {
-        type: String
+        type: Number
     },
     VT16: {
-        type: String
+        type: Number
     },
     VT17: {
-        type: String
+        type: Number
     },
     VT18: {
-        type: String
+        type: Number
     },
     VT19: {
-        type: String
+        type: Number
     },
     VT20: {
-        type: String
+        type: Number
     },
     VT21: {
-        type: String
+        type: Number
     },
     VT22: {
-        type: String
+        type: Number
     },
     VT23: {
-        type: String
+        type: Number
     },
     VT24: {
-        type: String
+        type: Number
     },
     VT25: {
-        type: String
+        type: Number
     },
     VT26: {
-        type: String
+        type: Number
     },
     VT27: {
-        type: String
+        type: Number
     },
     VT28: {
-        type: String
+        type: Number
     },
     VT29: {
-        type: String
+        type: Number
     },
     VT30: {
-        type: String
+        type: Number
     },
     VT31: {
-        type: String
+        type: Number
     },
     VT32: {
-        type: String
+        type: Number
     },
     VT33: {
-        type: String
+        type: Number
     },
     VT34: {
-        type: String
+        type: Number
     },
     VT35: {
-        type: String
+        type: Number
     },
     VT36: {
-        type: String
+        type: Number
     },
     VT37: {
-        type: String
+        type: Number
     },
     VT38: {
-        type: String
+        type: Number
     },
     VT39: {
+        type: Number
+    },
+    AAS1: {
+        type: String
+    },
+    AAS2: {
+        type: String
+    },
+    AAS3: {
+        type: String
+    },
+    AAS4: {
+        type: String
+    },
+    AAS5: {
+        type: String
+    },
+    AAS6: {
+        type: String
+    },
+    AAS7: {
+        type: String
+    },
+    AAS8: {
+        type: String
+    },
+    AAS9: {
+        type: String
+    },
+    AAS10: {
+        type: String
+    },
+    AAS11: {
+        type: String
+    },
+    AAS12: {
+        type: String
+    },
+    AAS13: {
+        type: String
+    },
+    AAS14: {
+        type: String
+    },
+    AAS15: {
+        type: String
+    },
+    AAS16: {
+        type: String
+    },
+    AAS17: {
+        type: String
+    },
+    AAS18: {
+        type: String
+    },
+    AAS19: {
+        type: String
+    },
+    AAS20: {
+        type: String
+    },
+    AAS21: {
+        type: String
+    },
+    AAS22: {
+        type: String
+    },
+    AAS23: {
+        type: String
+    },
+    AAS24: {
+        type: String
+    },
+    AAS25: {
+        type: String
+    },
+    AAS26: {
+        type: String
+    },
+    AAS27: {
+        type: String
+    },
+    AAS28: {
+        type: String
+    },
+    AAS29: {
+        type: String
+    },
+    AAS30: {
+        type: String
+    },
+    AAS31: {
+        type: String
+    },
+    AAS32: {
+        type: String
+    },
+    AAS33: {
+        type: String
+    },
+    AAS34: {
+        type: String
+    },
+    AAS35: {
+        type: String
+    },
+    AAS36: {
+        type: String
+    },
+    AAS37: {
+        type: String
+    },
+    AAS38: {
+        type: String
+    },
+    AAS39: {
         type: String
     },
 });

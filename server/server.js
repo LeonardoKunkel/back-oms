@@ -48,6 +48,11 @@ const   express     = require('express'),
         marcaAguaEstacion = require('../routes/marcaAguaRuta'),
         firmaEstacion = require('../routes/firmaRuta'),
         firmaRepresentante = require('../routes/firmaRepresentanteruta'),
+        simulacro = require('../routes/Elemento 13/simulacroRuta'),
+        simulacro2 = require('../routes/Elemento 13/simulacro2Ruta'),
+        simulacro3 = require('../routes/Elemento 13/simulacro3Ruta'),
+        simulacro4 = require('../routes/Elemento 13/simulacro4Ruta'),
+        simulacro5 = require('../routes/Elemento 13/simulacro5Ruta'),
         app = express(),
         cors = require('cors');
 
@@ -119,6 +124,11 @@ const   express     = require('express'),
     app.use('/firmaRepresentante',firmaRepresentante);
     app.use('/equipoCritico', onceEquipo);
     app.use('/evaluacion', evaluacionXIV);
+    app.use('/simulacro', simulacro);
+    app.use('/simulacro2', simulacro2);
+    app.use('/simulacro3', simulacro3);
+    app.use('/simulacro4', simulacro4);
+    app.use('/simulacro5', simulacro5);
 
 
     // app.use('/comunicacionParticipacion',ComunicacionParticipacionConsulta)

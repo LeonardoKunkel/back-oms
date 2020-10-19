@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const evaluacionSchema = new mongoose.Schema({
+    trimestre: {type: String},
     fecha1: {type: Number},
     fecha2: {type: Number},
     fecha3: {type: Number},
