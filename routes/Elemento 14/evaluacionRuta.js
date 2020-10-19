@@ -7,6 +7,7 @@ router.post('/create', [verificarToken], (req, res) => {
     const body = req.body;
     console.log(body);
     let newDatos = {
+        trimestre: body.trimestre,
         fecha1: body.fecha1,
         fecha2: body.fecha2,
         fecha3: body.fecha3,
