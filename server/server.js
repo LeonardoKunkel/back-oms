@@ -104,8 +104,6 @@ const   express     = require('express'),
         app = express(),
         cors = require('cors');
 
-        const uuid = require('uuid/v4');
-        const path = require('path');
 
     mongoose.connect("mongodb://localhost:27017/apiOMS", { useNewUrlParser: true, useCreateIndex: true }).then(() =>{
     console.log('Base de datos en  \x1b[43m%s\x1b[40m', 'linea');

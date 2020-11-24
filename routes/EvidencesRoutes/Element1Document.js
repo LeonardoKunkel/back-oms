@@ -3,13 +3,13 @@ const express = require('express'),
       multer = require('multer'),
       path = require('path'),
       app = express();
-      const uuid = require('uuid/v4');
+      const { uuidv4 } = require('uuid');
 
       //Storage para tipos de documentos subidos ademas de su extencion
 const storage = multer.diskStorage({
     destination: path.join('public/uploads/Elemento1/documents'),
     filename: (req, file, cb) =>{
-        cb(null, uuid() + path.extname( file.originalname));
+        cb(null, uuidv4() + path.extname( file.originalname));
     }
 });
     //Settings
