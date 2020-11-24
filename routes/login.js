@@ -9,11 +9,11 @@ router.post('/', (req, res) => {
     let body = req.body;
     console.log(body);
 
-    User.findOne({email: body.email}, (err, userDB) =>{
+    User.findOne({email: body.email}, (err, userDB) => {
         if(err){
             return res.json({
                 err
-            })
+            });
         }
 
         if(!userDB){
@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
                 err: {
                     message: 'El email es incorrecto'
                 }
-            })
+            });
         }
 
         if(!bcrypt.compareSync(body.password, userDB.password)) {
@@ -29,18 +29,21 @@ router.post('/', (req, res) => {
                 err: {
                     message: 'La contraseña es incorrecta'
                 }
-            })
+            });
         }
 
         let token = jwt.sign({
             user: userDB,   
-        }, process.env.SEED, {expiresIn: process.env.CADUCIDAD_TOKEN});
+        },
+        process.env.SEED,
+        {expiresIn: process.env.CADUCIDAD_TOKEN}
+        );
 
         res.json({
             ok: true,
             token
-        })
-    })
-})
+        });
+    });
+});
 
 module.exports = router;
